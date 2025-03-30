@@ -34,7 +34,10 @@
     toast.innerHTML = `<svg width='22' height='22' viewBox='0 0 24 24' fill='currentColor'>${Icons.info}</svg> <span>${message}</span>`
     document.body.appendChild(toast)
     setTimeout(() => {
-      toast.remove()
+      toast.classList.add("animate-down")
+      setTimeout(() => {
+        toast.remove()      
+      }, 350)
     }, 3000)
   })
 </script>

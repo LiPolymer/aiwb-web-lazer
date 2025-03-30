@@ -7,18 +7,18 @@ export const theme: ThemeUserConfig = {
   /** Will be used in index page & copyright declaration */
   author: 'Dubi906w',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: '可能是全网收集得最全面的适用于教学一体机、教学触摸屏和红外教学白板的 Windows / Linux 平台实用软件推荐合集。',
+  description: '可能是全网收集得最全面的适用于班级一体机、教室触摸屏和老师电脑的 Windows / Linux 平台教学辅助软件推荐合集。',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
   locale: {
-    lang: 'en-US',
-    attrs: 'en_US',
+    lang: 'zh-CN',
+    attrs: 'zh_CN',
     // Date locale
-    dateLocale: 'en-US',
+    dateLocale: 'zh-CN',
     dateOptions: {
       day: 'numeric',
-      month: 'short',
+      month: 'numeric',
       year: 'numeric'
     }
   },

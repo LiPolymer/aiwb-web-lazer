@@ -12,6 +12,7 @@ import SkillLayout from '@/components/home/SkillLayout.astro'
 import awesomeiwbLogo from '@/assets/aiwb/aiwb_logo.svg'
 import config from '@/site-config'
 import AiwbHomeSoftList from '@/components/aiwb/home/AiwbHomeSoftList.astro'
+import AiwbTextLogo from '@/components/aiwb/home/AiwbTextLogo.astro'
 
 const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
 const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
@@ -24,7 +25,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 <PageLayout meta={{ title: 'Home' }} highlightColor='#70FFB8'>
   <main class='flex w-full flex-col items-center'>
-    <section class='animate mb-10 flex flex-col items-center gap-y-7' id='content-header'>
+    <section class='animate mb-32 flex flex-col items-center gap-y-7 mt-18' id='content-header'>
       <Image
         src={awesomeiwbLogo}
         alt='awesomeiwb-logo'
@@ -32,8 +33,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         loading='eager'
       />
 
+      <AiwbTextLogo/>
+
       <div class='flex flex-col items-center gap-y-4'>
-        <h1 class='text-4xl font-bold'>{config.title}</h1>
         <h4 class='text-base max-w-28rem text-center text-foreground:50 -mb-2'>{config.description}</h4>
         <h4 class='text-base font-bold max-w-28rem text-center text-foreground:75'>由 {config.author} 亲情撰写，源自于 GitHub 仓库版本</h4>
         <div class='flex flex-wrap justify-center mt-2 gap-x-7 gap-y-3'>
