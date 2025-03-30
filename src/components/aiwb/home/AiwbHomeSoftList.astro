@@ -1,0 +1,21 @@
+---
+import Section from '@/components/home/Section.astro'
+
+import AiwbListJson from '../../../content/aiwb.list.json'
+import AiwbSectionsJson from '../../../content/aiwb.sections.json'
+import AiwbToolSection from './AiwbToolSection.astro'
+---
+
+<Section title='软件列表'>
+  <div class='grid grid-cols-1 gap-1'>
+    {AiwbSectionsJson.map((item) => (
+      <Fragment>
+        <AiwbToolSection 
+            class="mb-5"
+            title={item.name}
+            tools={AiwbListJson.filter((i) => i.section === item.slug)}
+        />
+      </Fragment>
+    ))}
+  </div>
+</Section>

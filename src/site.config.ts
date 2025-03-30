@@ -3,11 +3,11 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
+  title: 'Awesome Iwb',
   /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
+  author: 'Dubi906w',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Stay hungry, stay foolish',
+  description: '可能是全网收集得最全面的适用于教学一体机、教学触摸屏和红外教学白板的 Windows / Linux 平台实用软件推荐合集。',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
@@ -24,8 +24,8 @@ export const theme: ThemeUserConfig = {
   },
   /** Set a logo image to show in the homepage. */
   logo: {
-    src: 'src/assets/avatar.png',
-    alt: 'Avatar'
+    src: 'src/assets/aiwb/aiwb_logo.svg',
+    alt: 'Awesome Iwb',
   },
 
   // === Global configuration ===
@@ -47,11 +47,10 @@ export const theme: ThemeUserConfig = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs' },
-      { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
-      { title: 'About', link: '/about' }
+      { title: '专属区', link: '/blog' },
+      { title: '文章', link: '/about' },
+      { title: '更新日志', link: '/about' },
+      { title: '论坛', link: '/about' }
     ]
   },
 
