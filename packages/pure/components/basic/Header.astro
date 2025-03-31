@@ -102,7 +102,7 @@ import { Icon } from '../user'
         // document.dispatchEvent(toggleDarkModeEvent)
         const newTheme = setTheme(undefined, true)
         darkModeBtn.dataset.theme = newTheme
-        showToast({ message: `Set theme to ${newTheme}` })
+        showToast({ message: `${newTheme==="system"?"改成跟随系统颜色设置了，喵~":newTheme==="light"?"太阳晒到尾巴梢了，喵~":newTheme==="dark"?"主人，该睡觉了，喵~":"aiwb"}` })
       })
 
       // Menu

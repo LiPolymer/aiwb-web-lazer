@@ -302,7 +302,7 @@
         ],
         "slug": "iw",
         "icon": "/aiwb/icons/iw.png",
-        "section": "whiteboard"
+        "section": "hidden"
     },
     {
         "name": "柠檬白板",
@@ -500,7 +500,7 @@
             }
         ],
         "slug": "cf",
-        "section": "lessonstable"
+        "section": "hidden"
     },
     {
         "name": "ExtraIsland",
@@ -1709,7 +1709,7 @@
         ],
         "slug": "shub",
         "icon": "/aiwb/icons/shub.png",
-        "section": "tools"
+        "section": "hidden"
     },
     {
         "name": "ClassDashboard",
@@ -1739,7 +1739,7 @@
         ],
         "slug": "cdb",
         "icon": "/aiwb/icons/cdb.png",
-        "section": "tools"
+        "section": "hidden"
     },
     {
         "name": "虚空白板",
@@ -1797,7 +1797,7 @@
             }
         ],
         "slug": "sltp",
-        "section": "tools"
+        "section": "hidden"
     },
     {
         "name": "Class Scoring Program",
@@ -1894,5 +1894,215 @@
         "slug": "examclock",
         "icon": "/aiwb/icons/examclock.png",
         "section": "kanbans"
+    },
+    {
+        "name": "RollCallSystem",
+        "name_en": "RollCallSystem",
+        "codename": "rcs",
+        "alternative_names": [],
+        "featured": true,
+        "description": "这是一个为教室点名而生的多功能程序。它不仅能帮助老师进行点名，还包含了丰富的功能，增强了课堂的互动性和趣味性。",
+        "slogan": "随机点名",
+        "short_description": "新颖的 Jetpack Compose 项目",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "xiaoye-kotlin/RollCallSystem",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "xiaoye-kotlin",
+                "order": 0
+            }
+        ],
+        "slug": "rcs",
+        "icon": "/aiwb/icons/rcs.png",
+        "section": "lottery"
+    },
+    {
+        "name": "原神抽卡点名器",
+        "name_en": "Genshin Impact Picker",
+        "codename": "gip",
+        "alternative_names": [],
+        "featured": true,
+        "description": "基于 Mantan21/Genshin-Impact-Wish-Simulator 的原神随机点名工具。",
+        "slogan": "随机点名",
+        "short_description": "玩原神的这辈子都有了",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "animation-picker/genshin-impact",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "luyanci",
+                "order": 0
+            }
+        ],
+        "slug": "gip",
+        "icon": "/aiwb/icons/gip.png",
+        "section": "lottery"
+    },
+    {
+        "name": "崩铁抽卡点名器",
+        "name_en": "Honkai Impact : Star Rail Picker",
+        "codename": "hisrp",
+        "alternative_names": [],
+        "featured": true,
+        "description": "一种基于原生HTML的班级随机抽卡（划掉）点名助手。",
+        "slogan": "随机点名",
+        "short_description": "玩崩铁的这辈子都有了",
+        "is_open_source": true,
+        "maintaining_status": "paused",
+        "links": [
+            {
+                "type": "github",
+                "repo": "kdxhub/random_name_picker",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "kdxhub",
+                "order": 0
+            }
+        ],
+        "slug": "hisrp",
+        "icon": "/aiwb/icons/hisrp.png",
+        "section": "lottery"
+    },
+    {
+        "name": "Typing-game",
+        "name_en": "Typing-game",
+        "codename": "tg",
+        "alternative_names": [],
+        "featured": true,
+        "description": "一个C#的休闲软件，主要功能有打字测试、随机点名、幸运抽奖、猜数字、人机猜拳",
+        "slogan": "休闲类",
+        "short_description": "适合班上搞生日会活动时使用",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "alex200816/Typing-game",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "alex200816",
+                "order": 0
+            }
+        ],
+        "slug": "tg",
+        "icon": "/aiwb/icons/tg.png",
+        "section": "tools"
+    },
+    {
+        "name": "RandomCall",
+        "name_en": "RandomCall",
+        "codename": "rc",
+        "alternative_names": [],
+        "featured": true,
+        "description": "简易的Python随机点名器",
+        "slogan": "随机点名",
+        "short_description": "又一个 Python 随机点名工具",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "Meltide/RandomCall",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "Meltide",
+                "order": 0
+            }
+        ],
+        "slug": "rc",
+        "icon": "/aiwb/icons/rc.png",
+        "section": "hidden"
+    },
+    {
+        "name": "Random-roll-call",
+        "name_en": "Random-roll-call",
+        "codename": "rrc",
+        "alternative_names": [],
+        "featured": true,
+        "description": "本软件开发宗旨皆在于班级电脑上公开使用的随机点名软件。它便于使用和配置，同时具有一定的名单保护，防止被意外篡改。它具有一个悬浮球，便于您在任何软件运行时快速开启随机点名窗口。",
+        "slogan": "随机点名",
+        "short_description": "又一个 Python 随机点名工具",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "Xiaoxiaoyu1321/Random-roll-call",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "Xiaoxiaoyu1321",
+                "order": 0
+            }
+        ],
+        "slug": "rrc",
+        "icon": "/aiwb/icons/rrc.svg",
+        "section": "hidden"
+    },
+    {
+        "name": "RandomExtract",
+        "name_en": "RandomExtract",
+        "codename": "re",
+        "alternative_names": [],
+        "featured": true,
+        "description": "该程序适用于各种点名和抽号的场景，因为网络上搜到的抽号器的UI都比较难看，所以自己写了一个，代码比较烂，不要介意哈。",
+        "slogan": "随机点名",
+        "short_description": "C#，可抽号或点名，很小巧",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "kakkk/RandomExtract",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "kakkk",
+                "order": 0
+            }
+        ],
+        "slug": "re",
+        "icon": "/aiwb/icons/re.png",
+        "section": "lottery"
     }
 ]

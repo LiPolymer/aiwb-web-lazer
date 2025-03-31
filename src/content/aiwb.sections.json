@@ -34,5 +34,18 @@
         "name": "希沃一体机专属",
         "slug": "seewocrack",
         "description": "希沃一体机专属软件，主要都是破解希沃管家或一体机冰点还原的工具，不保证可用性。"
+    },
+    {
+        "type": "section",
+        "name": "CSES 规范类项目",
+        "slug": "cses",
+        "description": "这里都是和 CSES 有关的东西，包括各种解析库，编辑器之类的。"
+    },
+    {
+        "type": "section_special",
+        "spoiler": true,
+        "name": "被隐藏的项目",
+        "slug": "hidden",
+        "description": ""
     }
 ]
