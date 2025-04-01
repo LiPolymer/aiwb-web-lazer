@@ -80,7 +80,7 @@ const { class: className, title, description, icon, slug, spoiler, tools: tools,
               </div>
               <div class='flex flex-row items-center justify-start gap-x-1.5'>
                 <AiwbMaintainingStatusBadge status={tool.maintaining_status} />
-                <div class='font-normal text-foreground:60'>{tool.short_description}</div>
+                <div class='font-normal text-foreground:60 truncate'>{tool.short_description}</div>
               </div>
             </div>
           </div>

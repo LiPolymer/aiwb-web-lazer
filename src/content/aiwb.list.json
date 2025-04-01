@@ -1563,7 +1563,7 @@
         "featured": true,
         "description": "这是一个一款为方便在下课时迅速关闭课件而开发的工具。本软件可以安装在大屏上（例如教学大屏），也可以安装在普通电脑上。",
         "slogan": "PPT 辅助",
-        "short_description": "用来下课后，一键关闭课件的工具",
+        "short_description": "用来课后一键关闭课件的工具",
         "is_open_source": true,
         "maintaining_status": "active",
         "links": [
@@ -2104,5 +2104,70 @@
         "slug": "re",
         "icon": "/aiwb/icons/re.png",
         "section": "lottery"
+    },
+    {
+        "name": "CSES",
+        "name_en": "The Course Schedule Exchange Schema",
+        "codename": "cses",
+        "alternative_names": [],
+        "featured": true,
+        "description": "CSES 是一种通用的课程表交换格式，用于在不同软件之间交换课程表。它被设计为简单易用，可以轻松转换为其他格式，如 ClassIsland 格式。",
+        "slogan": "课程表规范",
+        "short_description": "通用的课程表交换格式",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "SmartTeachCN/CSES",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "organization",
+                "user_source": "github",
+                "username": "SmartTeachCN",
+                "order": 0
+            }
+        ],
+        "slug": "cses",
+        "icon": "/aiwb/icons/ci.png",
+        "section": "cses"
+    },
+    {
+        "name": "CsesWebEditor",
+        "name_en": "CsesWebEditor",
+        "codename": "cseswe",
+        "alternative_names": [],
+        "featured": true,
+        "description": "一个基于Web的课程表编辑器，支持CSES（Course Schedule Exchange Schema）格式的课程表创建、管理和导出。",
+        "slogan": "编辑器",
+        "short_description": "基于 Web 的 CSES 档案编辑器",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "SmartTeachCN/CsesWebEditor",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "PYLXU",
+                "order": 0
+            },
+            {
+                "user_type": "organization",
+                "user_source": "github",
+                "username": "SmartTeachCN",
+                "order": 1
+            }
+        ],
+        "slug": "cseswe",
+        "section": "cses"
     }
 ]
