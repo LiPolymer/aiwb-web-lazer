@@ -3,49 +3,55 @@
         "type": "section",
         "name": "白板与批注类",
         "slug": "whiteboard",
-        "description": "屏幕批注类软件和白板类软件，一般带有 PPT 批注功能，适合班级一体机使用。"
+        "icon": "pen_ai",
+        "description": "适合一体机使用的屏幕批注/书写软件和第三方白板软件"
     },
     {
         "type": "section",
         "name": "课程表类",
         "slug": "lessonstable",
-        "description": "课程表类软件，主要用于在班级一体机上显示课程表等其他信息，一般内置课程安排，单双周等高级功能。"
+        "icon": "blackboard",
+        "description": "内置课表规划，单双周等高级功能的课表小组件应用"
     },
     {
         "type": "section",
         "name": "小组件与看板类",
         "slug": "kanbans",
-        "description": "小组件类软件和看板类软件，用于在桌面显示作业，课程表，考试信息等（不包含主要功能是课程表显示的软件）。"
+        "icon": "info",
+        "description": "用于在桌面或屏幕上显示相关信息，一般是作业或倒计日"
     },
     {
         "type": "section",
         "name": "点名与抽奖类",
         "slug": "lottery",
-        "description": "点名类软件和抽奖类软件，主要提供随机抽人，抽号，人脸识别抽人等功能的软件，可能会含有 Web 项目。"
+        "icon": "gift",
+        "description": "主要提供随机抽人，抽号，人脸识别抽人等功能的软件"
     },
     {
         "type": "section",
         "name": "辅助与工具类",
         "slug": "tools",
-        "description": "辅助类软件和工具类软件，主要用于一体机 Windows 系统的体验优化或 Office、EasiNote5 等软件的辅助工具。"
+        "icon": "tool",
+        "description": "一体机操作系统的调校工具或 第三方应用的优化辅助类软件"
     },
     {
         "type": "section",
         "name": "希沃一体机专属",
         "slug": "seewocrack",
-        "description": "希沃一体机专属软件，主要都是破解希沃管家或一体机冰点还原的工具，不保证可用性。"
+        "description": "破解希沃管家/冰点还原的工具，作者不保证可用性"
     },
     {
         "type": "section",
         "name": "CSES 规范类项目",
         "slug": "cses",
-        "description": "这里都是和 CSES 有关的东西，包括各种解析库，编辑器之类的。"
+        "description": "和 CSES 有关的东西，包括各种解析库，编辑器之类的玩意"
     },
     {
-        "type": "section_special",
+        "type": "section",
         "spoiler": true,
         "name": "被隐藏的项目",
         "slug": "hidden",
-        "description": ""
+        "icon": "eye_close",
+        "description": "缺乏维护/代码质量低/文档不完善/正在画饼的项目"
     }
 ]

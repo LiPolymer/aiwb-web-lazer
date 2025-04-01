@@ -13,6 +13,7 @@ import awesomeiwbLogo from '@/assets/aiwb/aiwb_logo.svg'
 import config from '@/site-config'
 import AiwbHomeSoftList from '@/components/aiwb/home/AiwbHomeSoftList.astro'
 import AiwbTextLogo from '@/components/aiwb/home/AiwbTextLogo.astro'
+import AiwbHeroBackground from '@/components/aiwb/home/AiwbHeroBackground.astro'
 
 const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
 const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
@@ -25,7 +26,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 <PageLayout meta={{ title: 'Home' }} highlightColor='#70FFB8'>
   <main class='flex w-full flex-col items-center'>
-    <section class='animate mb-32 flex flex-col items-center gap-y-7 mt-18' id='content-header'>
+    <section class='animate mb-16 flex flex-col items-center gap-y-7 mt-24 relative' id='content-header'>
+
+      <AiwbHeroBackground/>
+
       <Image
         src={awesomeiwbLogo}
         alt='awesomeiwb-logo'

@@ -12,13 +12,13 @@ const { status, ...props } = Astro.props
         status === "discountinued" && "dark:bg-zinc-800:50 bg-zinc-300:50",
         status === "paused" && "dark:bg-yellow-800:50 bg-yellow-300:50",
     ]}>
-        <span class='relative flex items-center justify-center'>
-          <span class:list={['absolute size-2 rounded-full border',
+        <span class='relative flex items-center justify-center opacity-60'>
+          <span class:list={['absolute rounded-full border',
           status === 'active' || status === 'paused' ? 'animate-ping': "",
           status === "paused" ? "animate-duration-[3s]": "",
-          status === "active" ? "border-green-400 bg-green-400 opacity-75" : status === "discountinued" ? "border-zinc-400 bg-zinc-400 opacity-0" : "border-yellow-700 bg-yellow-700 opacity-25"]}></span>
+          status === "active" ? "size-2.25 dark:border-green-400 border-green-600 dark:bg-green-400 bg-green-600 opacity-75" : status === "discountinued" ? "size-0 border-zinc-400 bg-zinc-400 opacity-0" : "size-2.25 dark:border-yellow-400 dark:bg-yellow-400 border-yellow-600 bg-yellow-600 opacity-25"]}></span>
           <span class:list={['size-2.25 rounded-full',
-            status === "active" ? "bg-green-400" : status === "discountinued" ? "bg-zinc-400 dark:opacity-75 opacity-50" : "bg-yellow-600 opacity-75"
+            status === "active" ? "dark:bg-green-400 bg-green-600" : status === "discountinued" ? "bg-zinc-400 dark:opacity-75 opacity-50" : "bg-yellow-600 opacity-75"
           ]}></span>
         </span>
         <div class:list={['font-normal text-xs',

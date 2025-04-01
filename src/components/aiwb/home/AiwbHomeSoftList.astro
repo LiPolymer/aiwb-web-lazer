@@ -13,6 +13,10 @@ import AiwbToolSection from './AiwbToolSection.astro'
         <AiwbToolSection 
             class="mb-5"
             title={item.name}
+            description={item.description}
+            icon={item.icon || "bulb"}
+            spoiler={item.spoiler}
+            slug={item.slug}
             tools={AiwbListJson.filter((i) => i.section === item.slug)}
         />
       </Fragment>

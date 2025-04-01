@@ -150,14 +150,28 @@ const themeColors = {
   }
 }
 
+const customBreakPoints = {
+  "fulltlw": "1120px",
+}
+
 export default defineConfig({
   presets: [
     presetUno(), // required
     presetTypography(typographyConfig)
   ],
   rules: [],
-  theme: {
-    colors: themeColors
+  extendTheme: (theme)=>{
+    return {
+      ...theme,
+      colors: {
+        ...theme.colors,
+        ...themeColors
+      },
+      breakpoints: {
+        ...theme.breakpoints,
+        ...customBreakPoints
+      }
+    }
   },
   // https://unocss.dev/guide/extracting#limitations
   safelist: [
