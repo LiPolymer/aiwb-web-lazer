@@ -2,6 +2,7 @@
 import Section from '@/components/home/Section.astro'
 
 import AiwbListJson from '../../../content/aiwb.list.json'
+import AiwbProjectsListJson from '../../../content/aiwb.projects.json'
 import AiwbSectionsJson from '../../../content/aiwb.sections.json'
 import AiwbToolSection from './AiwbToolSection.astro'
 ---
@@ -18,6 +19,7 @@ import AiwbToolSection from './AiwbToolSection.astro'
             spoiler={item.spoiler}
             slug={item.slug}
             tools={AiwbListJson.filter((i) => i.section === item.slug)}
+            projects={AiwbProjectsListJson.filter((i) => i.section === item.slug)}
         />
       </Fragment>
     ))}

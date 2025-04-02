@@ -12,6 +12,13 @@ interface Props {
   description: string
   spoiler: boolean | undefined
   icon: string
+  projetcs: {
+    project_name: string
+    languages: string[]
+    description: string
+    links: object[]
+    section: string
+  }[]
   tools: {
     name: string
     name_en: string
@@ -28,12 +35,20 @@ interface Props {
 }
 
 const { class: className, title, description, icon, slug, spoiler, tools: tools, ...props } = Astro.props
+
+const special_properties: boolean[] = [spoiler??false];
+let ToolSectionTagName = "div"
+
+if (special_properties.includes(true)) {
+  ToolSectionTagName = "aiwb-toolsection"
+}
 ---
 
-<div
+<ToolSectionTagName
   class={cn('not-prose flex flex-col rounded-xl border py-3 pt-4 px-3 gap-y-3 sm:gap-y-4 overflow-hidden', className, 
     spoiler!==undefined && spoiler===true ? "relative": ""
   )}
+  data-slug={slug}
   {...props}
 >
   <div class='m-0 px-2 text-lg font-medium flex flex-row items-center gap-x-3'>
@@ -91,13 +106,24 @@ const { class: className, title, description, icon, slug, spoiler, tools: tools,
   {spoiler!==undefined && spoiler===true ? <div class="absolute top-0 left-0 w-full h-full pt-16 z-10" id={`${slug}-spoiler-overlay`}>
     <AiwbToolSectionSpoilerOverlay/>
   </div>: null}
-  <!-- TODO: 这里换成Custom Elements来实现 -->
-  {spoiler!==undefined && spoiler===true ? <script set:html={`
-    document.querySelector("#${slug}-spoiler-overlay").addEventListener("click",(e)=>{
-      e.currentTarget.remove();
-      document.querySelector("#${slug}-tools-content").classList.remove("blur-xl")
-      document.querySelector("#${slug}-tools-content").classList.remove("opacity-50")
-      document.querySelector("#${slug}-tools-content").classList.remove("pointer-events-none")
-    })
-  `}/>:null}
 </div>
+
+<script>
+  class AiwbToolSectionElement extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      let slugId = this.getAttribute("data-slug");
+      let contentElement = this.querySelector(`#${slugId}-tools-content`)
+      this.querySelector(`#${slugId}-spoiler-overlay`)?.addEventListener("click",(e)=>{
+        e.currentTarget?.remove();
+        contentElement?.classList.remove("blur-xl","opacity-50","pointer-events-none");
+      })
+    }
+  }
+
+  customElements.define("aiwb-toolsection", AiwbToolSectionElement);
+
+</script>
