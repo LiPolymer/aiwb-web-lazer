@@ -2,9 +2,9 @@
 import Section from '@/components/home/Section.astro'
 
 import AiwbListJson from '../../../content/aiwb.list.json'
-import AiwbProjectsListJson from '../../../content/aiwb.projects.json'
 import AiwbSectionsJson from '../../../content/aiwb.sections.json'
 import AiwbToolSection from './AiwbToolSection.astro'
+import { AiwbCopyright } from 'astro-pure/components/pages'
 ---
 
 <Section title='软件列表'>
@@ -19,9 +19,16 @@ import AiwbToolSection from './AiwbToolSection.astro'
             spoiler={item.spoiler}
             slug={item.slug}
             tools={AiwbListJson.filter((i) => i.section === item.slug)}
-            projects={AiwbProjectsListJson.filter((i) => i.section === item.slug)}
         />
       </Fragment>
     ))}
+  </div>
+  <div>
+    <AiwbCopyright
+    data={{
+      title: "Awesome Iwb - 全网最全的班级一体机实用软件整合目录",
+      latestUpdateDate: new Date("2025.04.02"),
+    }}
+  />
   </div>
 </Section>
