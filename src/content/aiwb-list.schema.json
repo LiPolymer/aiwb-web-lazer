@@ -1,0 +1,725 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "version": {
+            "const": 1,
+            "type": "integer",
+            "description": "Awesome Iwb Metadata 版本号，默认为 1",
+            "title": "Awesome Iwb Metadata 版本号 (version)"
+        },
+        "$schema": {
+            "const": "./aiwb-list.schema.json",
+            "type": "string",
+            "description": "JSON Schema，默认为 ./aiwb-list.schema.json",
+            "title": "Json Schema ($schema)"
+        },
+        "data": {
+            "type": "array",
+            "description": "包含所有项目的数组",
+            "title": "项目列表 (data)",
+            "items": {
+                "$ref": "#/$defs/item"
+            }
+        }
+    },
+    "$defs": {
+        "link_git_pages": {
+            "github": {
+                "type": "string",
+                "description": "指定要跳转到该 GitHub 仓库的页面，可选择跳转到默认的代码页面，或者跳转到 Releases、Issues、Pull Requests或Wiki 页面，默认为代码页面。",
+                "title": "Git 页面 (page)",
+                "examples": ["code", "releases", "issues", "prs", "wiki", "commits"],
+                "enum": ["code", "releases", "issues", "prs", "wiki", "commits"],
+                "default": "code"
+            },
+            "gitlab": {
+                "type": "string",
+                "description": "指定要跳转到该 GitLab 仓库的页面，可选择跳转到默认的代码页面，或者跳转到 Releases、Issues、Merge Requests或Wiki 页面，默认为代码页面。",
+                "title": "Git 页面 (page)",
+                "examples": ["code", "releases", "issues", "mrs", "wiki", "milestones", "commits", "network"],
+                "enum": ["code", "releases", "issues", "mrs", "wiki", "milestones", "commits", "network"],
+                "default": "code"
+            }
+        },
+        "link_github": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "链接类型，默认为 github",
+                    "title": "链接类型 (type)",
+                    "enum": ["github", "gitlab"]
+                },
+                "repo": {
+                    "type": "string",
+                    "description": "Git 仓库，使用[用户名]/[仓库名]的格式。",
+                    "title": "Git 仓库地址 (repo)",
+                    "pattern": "^[a-zA-Z0-9._-]{4,}\/[a-zA-Z0-9._-]{4,}$"
+                },
+                "branch": {
+                    "type": "string",
+                    "description": "Git 仓库的分支，默认为 master",
+                    "title": "Git 仓库分支 (branch)",
+                    "examples": ["main", "master", "dev"],
+                    "default": "master"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "对该仓库的描述",
+                    "title": "链接描述 (description)",
+                    "examples": ["GitHub 仓库", "GitHub Repo"]
+                },
+                "is_main": {
+                    "type": "boolean",
+                    "description": "是否为主要链接，默认为 true",
+                    "title": "是否为主要链接 (is_main)",
+                    "default": true
+                }
+            },
+            "required": ["repo", "type"],
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "type": { "const": "github" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "page": { "$ref": "#/$defs/link_git_pages/github" }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": { "const": "gitlab" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "page": { "$ref": "#/$defs/link_git_pages/gitlab" }
+                        }
+                    }
+                }
+            ]
+        },
+        "link_website": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "const": "website",
+                    "type": "string",
+                    "description": "链接类型，默认为 website",
+                    "title": "链接类型 (type)"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "网站地址，必须是一个有效的 URL。",
+                    "title": "网站地址 (url)",
+                    "format": "uri"
+                },
+                "service":{
+                    "type": "string",
+                    "description": "网站服务商，可以不用填写，会根据你填写的服务商来显示对应的图标",
+                    "title": "网站服务商 (service)",
+                    "examples": ["github_pages", "vercel", "netlify", "streamlit", "replit", "codepen", "glitch", "railway"],
+                    "anyOf": [
+                        { "const": "github_pages", "title": "GitHub Pages" },
+                        { "const": "vercel", "title": "Vercel" },
+                        { "const": "netlify", "title": "Netlify" },
+                        { "const": "streamlit", "title": "Streamlit" },
+                        { "const": "replit", "title": "Replit" },
+                        { "const": "codepen", "title": "CodePen" },
+                        { "const": "glitch", "title": "Glitch" },
+                        { "const": "railway", "title": "Railway" }
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "对该网站的描述",
+                    "title": "链接描述 (description)",
+                    "examples": ["官方网站", "落地页"]
+                },
+                "is_main": {
+                    "type": "boolean",
+                    "description": "是否为主要链接，默认为 true",
+                    "title": "是否为主要链接 (is_main)",
+                    "default": true
+                }
+            },
+            "required": ["url", "type"]
+        },
+        "link_qq_group": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "const": "qq_group",
+                    "type": "string",
+                    "description": "链接类型，默认为 qq_group",
+                    "title": "链接类型 (type)"
+                },
+                "group_id": {
+                    "type": "string",
+                    "description": "QQ群号，必须是一个有效的 QQ 群号。",
+                    "title": "QQ群号 (group_id)",
+                    "pattern": "^\\d{5,12}$"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "对该链接的描述",
+                    "title": "链接描述 (description)",
+                    "examples": ["QQ群", "交流群"]
+                },
+                "is_main": {
+                    "type": "boolean",
+                    "description": "是否为主要链接，默认为 true",
+                    "title": "是否为主要链接 (is_main)",
+                    "default": true
+                }
+            },
+            "required": ["group_id", "type"]
+        },
+        "link_cloud_drive_website": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "const": "cloud_drive_website",
+                    "type": "string",
+                    "description": "链接类型，默认为 cloud_drive_website",
+                    "title": "链接类型 (type)"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "网盘地址，必须是一个有效的 URL。",
+                    "title": "网盘地址 (url)",
+                    "format": "uri"
+                },
+                "password": {
+                    "type": "string",
+                    "description": "网盘文件的提取码，默认为空（也就是不需要密码。如果你的网盘链接已经包含了密码，也需要在这里写出来）",
+                    "title": "网盘提取码 (password)",
+                    "examples": ["114514", "acceed"],
+                    "minLength": 4,
+                    "maxLength": 8
+                },
+                "provider": {
+                    "type": "string",
+                    "description": "网盘提供商，必须填写，会根据你填写的网盘提供商来显示对应的图标",
+                    "title": "网盘提供商 (provider)",
+                    "examples": ["baidupan", "123pan", "lanzou", "onedrive"],
+                    "anyOf": [
+                        { "const": "baidupan", "title": "百度网盘" },
+                        { "const": "123pan", "title": "123网盘" },
+                        { "const": "lanzou", "title": "蓝奏云" },
+                        { "const": "onedrive", "title": "OneDrive" },
+                        { "const": "quarkpan", "title": "夸克网盘" },
+                        { "const": "alidrive", "title": "阿里云盘" },
+                        { "const": "189cloud", "title": "天翼云盘"},
+                        { "const": "weiyun", "title": "微云" },
+                        { "const": "dropbox", "title": "Dropbox" },
+                        { "const": "googledrive", "title": "Google Drive" },
+                        { "const": "yandexdisk", "title": "Yandex Disk" },
+                        { "const": "mega", "title": "MEGA" },
+                        { "const": "ctfile", "title": "城通网盘" },
+                        { "const": "meganz", "title": "MEGA.nz" },
+                        { "const": "mediafire", "title": "MediaFire" },
+                        { "const": "cloudreve", "title": "Cloudreve" },
+                        { "const": "alist", "title": "Alist" },
+                        { "const": "other", "title": "其他网盘" }
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "对该网盘的描述",
+                    "title": "链接描述 (description)",
+                    "examples": ["网盘地址", "下载地址"]
+                },
+                "is_main": {
+                    "type": "boolean",
+                    "description": "是否为主要链接，默认为 true",
+                    "title": "是否为主要链接 (is_main)",
+                    "default": true
+                }
+            },
+            "required": ["url", "type", "provider"]
+        },
+        "link_bilibili_video": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "const": "bilibili_video",
+                    "type": "string",
+                    "description": "链接类型，默认为 bilibili_video",
+                    "title": "链接类型 (type)"
+                },
+                "video_id": {
+                    "type": "string",
+                    "description": "B站视频 BV号，必须是一个有效的 BV号。",
+                    "title": "B站视频 BV号 (video_id)",
+                    "pattern": "(BV.*?).{10}"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "对该链接的描述",
+                    "title": "链接描述 (description)",
+                    "examples": ["B站宣传视频", "B站视频"]
+                },
+                "is_main": {
+                    "type": "boolean",
+                    "description": "是否为主要链接，默认为 true",
+                    "title": "是否为主要链接 (is_main)",
+                    "default": true
+                }
+            },
+            "required": ["video_id", "type"]
+        },
+        "metadata": {
+            "type": "object",
+            "description": "该项目或应用的元数据",
+            "title": "项目元数据 (metadata)",
+            "properties": {
+                "supported_platforms": {
+                    "type": "array",
+                    "description": "该项目或应用支持的平台列表，包含 Windows、Linux、Mac、Android、iOS 等平台。",
+                    "title": "支持的平台列表 (supported_platforms)",
+                    "items": {
+                        "type": "string",
+                        "anyOf": [
+                            { "const": "windows-xp", "title": "Windows XP" },
+                            { "const": "windows-7", "title": "Windows 7" },
+                            { "const": "windows-8x", "title": "Windows 8/8.1" },
+                            { "const": "windows-10", "title": "Windows 10" },
+                            { "const": "windows-11", "title": "Windows 11" },
+                            { "const": "debian", "title": "Debian" },
+                            { "const": "deepin", "title": "Deepin/UOS" },
+                            { "const": "fedora", "title": "Fedora" },
+                            { "const": "archlinux", "title": "Arch Linux" },
+                            { "const": "opensuse", "title": "openSUSE" },
+                            { "const": "raspbian", "title": "Raspbian" },
+                            { "const": "linux", "title": "Linux" },
+                            { "const": "macos", "title": "macOS" },
+                            { "const": "android", "title": "Android" },
+                            { "const": "ios", "title": "iOS" },
+                            { "const": "harmonyos", "title": "HarmonyOS" }
+                        ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 16,
+                    "uniqueItems": true
+                },
+                "programming_languages": {
+                    "type": "array",
+                    "description": "该项目或应用使用的编程语言列表。",
+                    "title": "使用的编程语言列表 (programming_languages)",
+                    "items": {
+                        "type": "string",
+                        "anyOf": [
+                            { "const": "c", "title": "C" },
+                            { "const": "cpp", "title": "C++" },
+                            { "const": "python", "title": "Python" },
+                            { "const": "java", "title": "Java" },
+                            { "const": "javascript", "title": "JavaScript" },
+                            { "const": "typescript", "title": "TypeScript" },
+                            { "const": "go", "title": "Go" },
+                            { "const": "rust", "title": "Rust" },
+                            { "const": "html", "title": "HTML" },
+                            { "const": "css", "title": "CSS" },
+                            { "const": "php", "title": "PHP" },
+                            { "const": "shell", "title": "Shell" },
+                            { "const": "dart", "title": "Dart" },
+                            { "const": "kotlin", "title": "Kotlin" },
+                            { "const": "swift", "title": "Swift" },
+                            { "const": "lua", "title": "Lua" },
+                            { "const": "csharp", "title": "C#" },
+                            { "const": "ruby", "title": "Ruby" },
+                            { "const": "r", "title": "R" },
+                            { "const": "elixir", "title": "Elixir" },
+                            { "const": "erlang", "title": "Erlang" },
+                            { "const": "haskell", "title": "Haskell" },
+                            { "const": "scala", "title": "Scala" },
+                            { "const": "clojure", "title": "Clojure" },
+                            { "const": "objective-c", "title": "Objective-C" }
+                        ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 8,
+                    "uniqueItems": true
+                },
+                "frameworks": {
+                    "type": "array",
+                    "description": "该项目或应用使用的框架列表。",
+                    "title": "使用的框架列表 (frameworks)",
+                    "items": {
+                        "type": "string",
+                        "anyOf": [
+                            { "const": "qt5", "title": "Qt 5" },
+                            { "const": "qt6", "title": "Qt 6" },
+                            { "const": "qt4", "title": "Qt 4" },
+                            { "const": "wxwidgets", "title": "wxWidgets" },
+                            { "const": "gtk3", "title": "GTK3" },
+                            { "const": "gtk4", "title": "GTK4" },
+                            { "const": "electron", "title": "Electron" },
+                            { "const": "flutter", "title": "Flutter" },
+                            { "const": "react", "title": "React" },
+                            { "const": "vue", "title": "Vue" },
+                            { "const": "angular", "title": "Angular" },
+                            { "const": ".net", "title": ".NET" },
+                            { "const": "django", "title": "Django" },
+                            { "const": "flask", "title": "Flask" },
+                            { "const": "laravel", "title": "Laravel" },
+                            { "const": "nextjs", "title": "Next.js" },
+                            { "const": "nuxtjs", "title": "Nuxt.js" },
+                            { "const": "wpf", "title": "WPF" },
+                            { "const": "winforms", "title": "WinForms" },
+                            { "const": "avalonia", "title": "Avalonia" },
+                            { "const": "jetpack-compose", "title": "Jetpack Compose" },
+                            { "const": "tkinter", "title": "Tkinter" },
+                            { "const": "win32", "title": "Win32" },
+                            { "const": "office-interop", "title": "Microsoft Office COM Interop" },
+                            { "const": "hieasyx", "title": "HiEasyX" },
+                            { "const": "gdi", "title": "GDI" },
+                            { "const": "d2d", "title": "Direct2D" },
+                            { "const": "rts", "title": "RealTimeStylus" }
+                        ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 8,
+                    "uniqueItems": true
+                },
+                "featured": {
+                    "type": "boolean",
+                    "description": "是否为推荐项目，默认为 false",
+                    "title": "推荐项目 (featured)"
+                },
+                "is_new_developer": {
+                    "type": "boolean",
+                    "description": "是否为新开发者，默认为 false",
+                    "title": "新开发者 (is_new_developer)",
+                    "default": false
+                },
+                "is_new_project": {
+                    "type": "boolean",
+                    "description": "是否为最近上榜的新项目或最近新创建的项目，默认为 false",
+                    "title": "新项目 (is_new_project)",
+                    "default": false
+                },
+                "pricing_type": {
+                    "type": "string",
+                    "description": "项目的定价类型，free 表示免费且没有任何形式上的捐赠和额外隐形收费，freemium 表示部分免费，paid 表示买断制收费，subscription 表示订阅制，donation 表示有捐赠",
+                    "title": "项目定价类型 (pricing_type)",
+                    "examples": ["free", "freemium", "paid", "subscription", "donation"],
+                    "anyOf": [
+                        { "const": "free", "title": "免费" },
+                        { "const": "freemium", "title": "部分免费" },
+                        { "const": "paid", "title": "买断制收费" },
+                        { "const": "subscription", "title": "订阅制" },
+                        { "const": "donation", "title": "捐赠" }
+                    ],
+                    "default": "free"
+                },
+                "is_open_source": {
+                    "type": "boolean",
+                    "description": "是否为开源项目，默认为 false。true为开源项目，false为闭源项目",
+                    "title": "开源项目 (is_open_source)"
+                },
+                "badge_type": {
+                    "type": "string",
+                    "description": "项目要展示的徽章类型（由于每个项目只能显示一个徽章，有多个徽章可供选择，可以选择一个最合适的徽章）",
+                    "title": "徽章类型 (badge_type)",
+                    "anyOf": [
+                        { "const": "is_open_source", "title": "是否开源", "description": "选择该项后，将会展示“是否开源”的徽章。" },
+                        { "const": "is_featured", "title": "是否是推荐项目", "description": "选择该项后，将会展示“是否是推荐项目”的徽章。" },
+                        { "const": "is_new_project", "title": "是否是新项目", "description": "选择该项后，将会展示“是否是新项目”的徽章。" },
+                        { "const": "is_new_developer", "title": "是否是新开发者", "description": "选择该项后，将会展示“是否是新开发者”的徽章。" },
+                        { "const": "maintaining_status", "title": "维护状态", "description": "选择该项后，将会展示“维护状态”的徽章。" },
+                        { "const": "pricing_type", "title": "定价类型", "description": "选择该项后，将会展示“定价类型”的徽章。" },
+                        { "const": "none", "title": "无徽章", "description": "选择该项后，将不会展示任何徽章。" }
+                    ],
+                    "default": "maintaining_status"
+                }
+            },
+            "required": [
+                "featured",
+                "is_open_source"
+            ]
+        },
+        "developer": {
+            "type": "object",
+            "description": "该项目或应用的开发者对象",
+            "title": "开发者对象",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "开发者类型，默认为个人开发者",
+                    "title": "开发者类型 (type)",
+                    "anyOf": [
+                        { "const": "user", "title": "个人开发者" },
+                        { "const": "organization", "title": "组织/团队" }
+                    ]
+                },
+                "source": {
+                    "type": "string",
+                    "description": "开发者来源",
+                    "title": "开发者来源 (source)",
+                    "anyOf": [
+                        { "const": "github", "title": "GitHub" },
+                        { "const": "gitlab", "title": "GitLab" },
+                        { "const": "bilibili", "title": "Bilibili 用户" },
+                        { "const": "qq", "title": "QQ 用户" },
+                        { "const": "other", "title": "其他" }
+                    ]
+                },
+                "nickname": {
+                    "type": "string",
+                    "description": "开发者昵称，默认为空（这个条目的优先级最高）",
+                    "title": "开发者昵称 (nickname)",
+                    "examples": ["Dubi906w", "Alan-CRL", "HelloWRC", "HelloAimen"],
+                    "minLength": 2
+                },
+                "description": {
+                    "type": "string",
+                    "description": "开发者描述，默认为空",
+                    "title": "开发者描述 (description)",
+                    "default": ""
+                },
+                "website": {
+                    "type": "array",
+                    "description": "开发者网站",
+                    "title": "开发者网站 (website)",
+                    "items": { "$ref": "#/$defs/link_website" }
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "开发者头像，默认为空。（这个条目的优先级大于从github，gitlab，bilibili，qq号等来源获得的头像）",
+                    "title": "开发者头像 (avatar)",
+                    "format": "uri"
+                }
+            },
+            "required": ["type", "source"],
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "source": { "const": "github" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "username": {
+                                "$ref": "#/$defs/developer_sources/github_username"
+                            }
+                        },
+                        "required": ["username"]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "source": { "const": "gitlab" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "username": {
+                                "$ref": "#/$defs/developer_sources/gitlab_username"
+                            }
+                        },
+                        "required": ["username"]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "source": { "const": "bilibili" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "uid": {
+                                "$ref": "#/$defs/developer_sources/bilibili_uid"
+                            }
+                        },
+                        "required": ["uid"]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "source": { "const": "qq" }
+                        }
+                    },
+                    "then": {
+                        "properties": {
+                            "qq_id": {
+                                "$ref": "#/$defs/developer_sources/qq_number"
+                            }
+                        },
+                        "required": ["qq_id"]
+                    }
+                }
+            ]
+        },
+        "developer_sources": {
+            "github_username": {
+                "type": "string",
+                "description": "GitHub 用户名或组织名，必须是一个有效的 GitHub 用户名或组织名。",
+                "title": "GitHub 用户名 (username)",
+                "pattern": "^[a-zA-Z0-9._-]{4,}$"
+            },
+            "gitlab_username": {
+                "type": "string",
+                "description": "GitLab 用户名或组织名，必须是一个有效的 GitLab 用户名或组织名。",
+                "title": "GitLab 用户名 (username)",
+                "pattern": "^[a-zA-Z0-9._-]{4,}$"
+            },
+            "bilibili_uid": {
+                "type": "string",
+                "description": "B站用户 UID，必须是一个有效的 B站用户 UID。",
+                "title": "B站用户 UID (uid)",
+                "pattern": "^\\d{1,16}$"
+            },
+            "qq_number": {
+                "type": "string",
+                "description": "QQ号，必须是一个有效的 QQ号。",
+                "title": "QQ号 (number)",
+                "pattern": "^\\d{5,12}$"
+            }
+        },
+        "item": {
+            "type": "object",
+            "description": "该 object 定义一个在aiwb上的应用或项目",
+            "title": "项目对象",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "该项目或应用的名称，注意这里填写的名称是该项目或应用最常用的名称。（根据情况填写对应中文名或英文名）",
+                    "title": "项目名称 (name)",
+                    "examples": ["智绘教Inkeys", "ClassIsland", "Rand 抽号器", "InkCanvasForClass"],
+                    "minLength": 2
+                },
+                "name_en": {
+                    "type": "string",
+                    "description": "该项目或应用的英文名称，注意这里填写的名称是该项目或应用最常用的英文名称。（根据情况填写对应英文名或项目的仓库名）",
+                    "title": "项目英文名称 (name_en)",
+                    "examples": ["Inkeys", "ClassIsland", "Rand", "InkCanvasForClass"],
+                    "minLength": 2
+                },
+                "codename": {
+                    "type": "string",
+                    "description": "该项目或应用的代号，一般和“slug”属性一致，填写项目的常见英文名缩写。",
+                    "title": "项目代号 (codename)",
+                    "examples": ["inkeys", "ci", "rand", "icc"],
+                    "minLength": 2,
+                    "maxLength": 10
+                },
+                "alternative_names": {
+                    "type": "array",
+                    "description": "该项目或应用的其他名称，注意这里填写的名称是该项目或应用最常用的名称。",
+                    "title": "项目其他名称 (alternative_names)",
+                    "items": {
+                        "type": "string",
+                        "minLength": 2
+                    }
+                },
+                "featured": {
+                    "type": "boolean",
+                    "description": "是否为推荐项目，默认为 false，该项已经弃用",
+                    "title": "推荐项目 (featured)",
+                    "deprecated": true
+                },
+                "description": {
+                    "type": "string",
+                    "description": "该项目或应用的描述，此处的描述较长，需要尽量描述出项目所拥有的功能与特点。",
+                    "title": "项目描述 (description)",
+                    "examples": ["Windows 屏幕批注工具，拥有高效批注和丰富功能，让屏幕演示变得简单，让教学授课变得高效，适用于触摸设备和 PC 端。"],
+                    "minLength": 10
+                },
+                "slogan": {
+                    "type": "string",
+                    "description": "在aiwb-web中，会显示在应用名称的后面，作为项目的类型（在“工具辅助”分区下的项目需要大致写明项目的用途，其他分区看着写吧）",
+                    "title": "项目类型 (slogan)",
+                    "examples": ["屏幕批注", "课程表灵动岛", "抽号器"],
+                    "maxLength": 16
+                },
+                "maintaining_status": {
+                    "type": "string",
+                    "description": "项目的维护状态，active 表示活跃，paused 表示开发暂缓（但是不是代表不更新了），discountinued 表示停更，unknown 表示未知状态（一般是没有人维护的项目或没有开源的项目，实在无法查询到项目的维护状态时使用）",
+                    "title": "项目维护状态 (maintaining_status)",
+                    "examples": ["active", "paused", "discountinued", "unknown"],
+                    "enum": ["active", "paused", "discountinued", "unknown"]
+                },
+                "short_description": {
+                    "type": "string",
+                    "description": "该项目或应用的简短描述，建议在 20 个字以内，尽量简洁明了。（确保在aiwb-web全尺寸应用列表的显示下不能被截断）",
+                    "title": "项目简短描述 (short_description)",
+                    "examples": ["C++ 写的高性能屏幕批注软件"],
+                    "maxLength": 24,
+                    "minLength": 5
+                },
+                "links": {
+                    "type": "array",
+                    "description": "该项目或应用的链接列表，包含 GitHub 仓库、官方网站（落地页和文档等）、B站宣传视频、在线部署的实例（Web项目）等链接。",
+                    "title": "项目链接列表 (links)",
+                    "items": {
+                        "anyOf": [
+                            { "$ref": "#/$defs/link_github" },
+                            { "$ref": "#/$defs/link_website" },
+                            { "$ref": "#/$defs/link_cloud_drive_website" },
+                            { "$ref": "#/$defs/link_qq_group" },
+                            { "$ref": "#/$defs/link_bilibili_video" }
+                        ]
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/$defs/metadata"
+                },
+                "developers": {
+                    "type": "array",
+                    "description": "该项目或应用的开发者列表，包含开发者的名称、GitHub ID、GitHub 主页等信息。",
+                    "title": "项目开发者列表 (developers)",
+                    "items": {
+                        "$ref": "#/$defs/developer"
+                    },
+                    "minItems": 1,
+                    "maxItems": 8,
+                    "uniqueItems": true
+                },
+                "slug": {
+                    "type": "string",
+                    "description": "该项目或应用的aiwb条目唯一标识符。一般和codename一致",
+                    "title": "项目条目唯一标识符 (slug)"
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "该项目或应用的图标",
+                    "title": "项目图标 (icon)"
+                },
+                "section": {
+                    "type": "array",
+                    "description": "该项目或应用的分类",
+                    "title": "项目分类 (section)",
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "uniqueItems": true
+                },
+                "hidden": {
+                    "type": "boolean",
+                    "description": "是否隐藏该项目，默认为 false。（这里不是放到隐藏分区，而是不在服务端渲染这个项目！）",
+                    "title": "隐藏项目 (hidden)",
+                    "default": false
+                }
+            },
+            "required": [
+                "name",
+                "codename",
+                "links",
+                "metadata",
+                "developers",
+                "slug",
+                "section"
+            ]
+        }
+    }
+}

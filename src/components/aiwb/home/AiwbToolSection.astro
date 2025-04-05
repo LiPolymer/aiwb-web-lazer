@@ -18,12 +18,16 @@ interface Props {
     codename: string
     short_description: string
     alternative_names: string[]
-    featured: boolean
-    description: string
     slogan: string
     maintaining_status: 'active' | 'discountinued' | 'paused'
+    metadata: {
+      featured?: boolean
+      is_open_source?: boolean
+      badge_type: "is_featured" | "is_open_source" | "maintaining_status" | "none"
+    }
     slug: string
     icon: string
+    hidden: boolean
   }[]
 }
 
@@ -44,56 +48,79 @@ if (special_properties.includes(true)) {
   data-slug={slug}
   {...props}
 >
-  <div class='m-0 px-2 text-lg font-medium flex flex-row items-center gap-x-3'>
-    <Icon name={icon} class='h-8 w-8 ml-1' />
-    <div class="flex flex-col">
-      <div class="text-lg font-medium">{title}</div>
-      <div class='font-normal text-sm text-foreground:60'>{description}</div>
+  <div class='m-0 px-2 text-lg font-medium flex flex-row items-start justify-between'>
+    <div class="flex flex-row items-center gap-x-3">
+      <Icon name={icon} class='h-8 w-8 ml-1 shrink-0' />
+      <div class="flex flex-col">
+        <div class="text-lg font-medium">{title}</div>
+        <div class='font-normal text-sm text-foreground:60'>{description}</div>
+      </div>
+    </div>
+    <div class='flex flex-row gap-x-3 -mt-4 ml-6'>
+      <div class="flex flex-col items-center justify-start">
+        <div class="w-14 bg-primary h-1 rounded-b-full rounded-t-0 mb-2"></div>
+        <div class='font-bold text-3xl text-primary'>{tools.filter((item)=>item.maintaining_status==="active" && !item.hidden).length}</div>
+        <div class='font-normal text-xs text-primary:60'>活跃项目</div>
+      </div>
+      <div class="flex flex-col items-center justify-start">
+        <div class="w-14 bg-foreground h-1 rounded-b-full rounded-t-0 mb-2"></div>
+        <div class='font-bold text-3xl text-foreground'>{tools.filter((item)=>!item.hidden).length}</div>
+        <div class='font-normal text-xs text-foreground:60'>项目总数</div>
+      </div>
     </div>
   </div>
-  <div id={`${slug}-tools-content`} class:list={['grid grid-cols-1 gap-x-2 gap-y-2 fulltlw:grid-cols-2',spoiler!==undefined && spoiler===true ? "transform-blur transform-opacity duration-350 blur-xl opacity-50 pointer-events-none": ""]}>
+  <div id={`${slug}-tools-content`} class:list={['grid grid-cols-1 gap-x-2 gap-y-2 fulltlw:grid-cols-2',spoiler!==undefined && spoiler===true ? "transform-blur transform-opacity duration-350 blur-xl opacity-50 pointer-events-none min-h-56": ""]}>
     {
-      tools.map((tool) => (
-        <a
-          class='group relative text-sm leading-normal no-underline'
-          id={tool.codename}
-          href={`/apps/${tool.slug}`}
-          target='_blank'
-        >
-          <div class='flex items-center gap-x-3 rounded-lg border border-transparent px-2 py-1.5 transition-colors hover:border-border hover:bg-muted'>
-            {tool.icon ? (
-              <img
-                src={tool.icon}
-                alt=''
-                class='size-11 object-contain rounded-lg bg-primary-foreground fill-foreground p-1.5'
-              />
-            ) : (
-              <svg xmlns='http://www.w3.org/2000/svg' class="size-11 rounded-lg bg-primary-foreground fill-foreground p-1.5" width='24' height='24' viewBox='0 0 24 24'>
-                <g fill='none'>
-                  <path d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
-                  <path
-                    fill='currentColor'
-                    d='M21 13v7.434a1.5 1.5 0 0 1-1.553 1.499l-.133-.011L12 21.008V13zm-11 0v7.758l-5.248-.656A2 2 0 0 1 3 18.117V13zm9.314-10.922a1.5 1.5 0 0 1 1.68 1.355l.006.133V11h-9V2.992zM10 3.242V11H3V5.883a2 2 0 0 1 1.752-1.985z'
+      tools.map((tool) => {
+        if (!tool.hidden) {
+          return (
+            <a
+              class='group relative text-sm leading-normal no-underline'
+              id={tool.codename}
+              href={`/apps/${tool.slug}`}
+              target='_blank'
+            >
+              <div class='flex items-center gap-x-3 rounded-lg border border-transparent px-2 py-1.5 transition-colors hover:border-border hover:bg-muted'>
+                {tool.icon ? (
+                  <img
+                    src={tool.icon}
+                    alt=''
+                    class='size-11 object-contain rounded-lg bg-primary-foreground fill-foreground p-1.5'
                   />
-                </g>
-              </svg>
-            )}
-            <div class='z-20 flex flex-col gap-y-0.5'>
-              <div class='flex flex-row items-center justify-star'>
-                <div class='font-medium text-base text-foreground'>{tool.name}</div>
-                {tool.slogan?(
-                  <div class='font-medium text-base text-foreground:75 px-2'>·</div>
-                  <div class='text-base font-medium text-foreground:75'>{tool.slogan}</div>
-                ):null}
+                ) : (
+                  <svg xmlns='http://www.w3.org/2000/svg' class="size-11 rounded-lg bg-primary-foreground fill-foreground p-1.5" width='24' height='24' viewBox='0 0 24 24'>
+                    <g fill='none'>
+                      <path d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
+                      <path
+                        fill='currentColor'
+                        d='M21 13v7.434a1.5 1.5 0 0 1-1.553 1.499l-.133-.011L12 21.008V13zm-11 0v7.758l-5.248-.656A2 2 0 0 1 3 18.117V13zm9.314-10.922a1.5 1.5 0 0 1 1.68 1.355l.006.133V11h-9V2.992zM10 3.242V11H3V5.883a2 2 0 0 1 1.752-1.985z'
+                      />
+                    </g>
+                  </svg>
+                )}
+                <div class='z-20 flex flex-col gap-y-0.5'>
+                  <div class='flex flex-row items-center justify-star'>
+                    <div class='font-medium text-base text-foreground'>{tool.name}</div>
+                    {tool.slogan?(
+                      <div class='font-medium text-base text-foreground:75 px-2'>·</div>
+                      <div class='text-base font-medium text-foreground:75'>{tool.slogan}</div>
+                    ):null}
+                  </div>
+                  <div class='flex flex-row items-center justify-start gap-x-1.5'>
+                    {tool.metadata.badge_type==="is_featured"&&(tool.metadata.featured??false) ? (
+                      <div class="px-1.25 pl-1 py-0.35 rounded-md flex flex-row items-center shrink-0 dark:bg-red-800:50 bg-red-300:50">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" class="dark:text-red-300:85 text-red-700:50 h-4 w-4"><path d="M160-400q0-105 50-187t110-138q60-56 110-85.5l50-29.5v132q0 37 25 58.5t56 21.5q17 0 32.5-7t28.5-23l18-22q72 42 116 116.5T800-400q0 88-43 160.5T644-125q17-24 26.5-52.5T680-238q0-40-15-75.5T622-377L480-516 339-377q-29 29-44 64t-15 75q0 32 9.5 60.5T316-125q-70-42-113-114.5T160-400Zm320-4 85 83q17 17 26 38t9 45q0 49-35 83.5T480-120q-50 0-85-34.5T360-238q0-23 9-44.5t26-38.5l85-83Z"/></svg>
+                        <div class="font-normal text-xs ml-0.75 dark:text-red-300:85 text-red-700:50">推荐</div>
+                      </div>
+                    ):tool.metadata.badge_type==="maintaining_status"?(<AiwbMaintainingStatusBadge status={tool.maintaining_status} />):null}
+                    <div class='font-normal text-foreground:60 truncate'>{tool.short_description}</div>
+                  </div>
+                </div>
               </div>
-              <div class='flex flex-row items-center justify-start gap-x-1.5'>
-                <AiwbMaintainingStatusBadge status={tool.maintaining_status} />
-                <div class='font-normal text-foreground:60 truncate'>{tool.short_description}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-      ))
+            </a>
+          )
+        }
+      })
     }
   </div>
   {spoiler!==undefined && spoiler===true ? <div class="absolute top-0 left-0 w-full h-full pt-16 z-10" id={`${slug}-spoiler-overlay`}>
@@ -112,7 +139,7 @@ if (special_properties.includes(true)) {
       let contentElement = this.querySelector(`#${slugId}-tools-content`)
       this.querySelector(`#${slugId}-spoiler-overlay`)?.addEventListener("click",(e)=>{
         e.currentTarget?.remove();
-        contentElement?.classList.remove("blur-xl","opacity-50","pointer-events-none");
+        contentElement?.classList.remove("blur-xl","opacity-50","pointer-events-none","min-h-56");
       })
     }
   }
