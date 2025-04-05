@@ -1846,6 +1846,7 @@
             },
             {
                 "type": "cloud_drive_website",
+                "provider": "lanzou",
                 "description": "Beta 0.1.2 下载链接",
                 "url": "https://vnisoft.lanzouq.com/iyUYa2omv86j",
                 "password": "vsb012",
@@ -2169,5 +2170,438 @@
         ],
         "slug": "cseswe",
         "section": "cses"
+    },
+    {
+        "name": "DesktopDrawpadBlocker",
+        "name_en": "DesktopDrawpadBlocker",
+        "codename": "ddb",
+        "alternative_names": [],
+        "featured": true,
+        "description": "DesktopDrawpadBlocker，Windows 软件插件，致力于剔除桌面上 希沃白板桌面悬浮窗等 杂乱无章的桌面画板悬浮窗，还您一个干净的桌面。",
+        "short_description": "隐藏白板软件的桌面批注弹窗",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "Alan-CRL/DesktopDrawpadBlocker",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "Alan-CRL",
+                "order": 0
+            }
+        ],
+        "slug": "ddb",
+        "icon": "/aiwb/icons/ddb.png",
+        "section": "tools"
+    },
+    {
+        "name": "SigmaCountdown",
+        "name_en": "SigmaCountdown",
+        "codename": "sc",
+        "alternative_names": [],
+        "featured": true,
+        "slogan": "桌面倒计时",
+        "description": "一个具有电影《流浪地球Ⅱ》风格的桌面倒计时贴片，目前仅支持高考",
+        "short_description": "流浪地球风格的桌面倒计时",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "NetheriteBowl/SigmaCountdown",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "NetheriteBowl",
+                "order": 0
+            }
+        ],
+        "slug": "sc",
+        "icon": "/aiwb/icons/sc.png",
+        "section": "kanbans"
+    },
+    {
+        "name": "希沃克星",
+        "name_en": "SeewoKiller",
+        "codename": "sk",
+        "alternative_names": [],
+        "featured": true,
+        "slogan": "SeewoKiller",
+        "description": "希沃克星：冰点解冻、游戏和晚自习制裁！使用善良的 GUI 而不是进 Windows PE",
+        "short_description": "冰点解冻、游戏和晚自习制裁",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "whstu/SeewoKiller",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "whstu",
+                "order": 0
+            }
+        ],
+        "slug": "sk",
+        "icon": "/aiwb/icons/sk.png",
+        "section": "seewocrack"
+    },
+    {
+        "name": "seewo_jailbreak",
+        "name_en": "seewo_jailbreak",
+        "codename": "sj",
+        "alternative_names": [],
+        "featured": true,
+        "slogan": "V3 解锁",
+        "short_description": "解除希沃 PASSWORDV3 管理员密码",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "CatMe0w/seewo_jailbreak",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "CatMe0w",
+                "order": 0
+            }
+        ],
+        "slug": "sj",
+        "section": "seewocrack"
+    },
+    {
+        "name": "SeewoMonitorSystem",
+        "name_en": "SeewoMonitorSystem",
+        "codename": "sms",
+        "alternative_names": [],
+        "featured": true,
+        "slogan": "反巡课",
+        "description": "SeewoMonitorSystem 是针对希沃巡课系统（希沃管家的监控）的反监控系统",
+        "short_description": "希沃巡课系统的反监控项目",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "DengHanxu/SeewoMonitorSystem",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "DengHanxu",
+                "order": 0
+            }
+        ],
+        "slug": "sms",
+        "section": "seewocrack"
+    },
+    {
+        "name": "SeewoActivationCodeCalculator",
+        "name_en": "Seewo-Activation-Code-Calculator",
+        "codename": "sacc",
+        "alternative_names": [],
+        "featured": true,
+        "description": "希沃扫码解锁工具，从二维码到激活码一键解锁电子白板。基于js，本地运行，无需联网。",
+        "short_description": "希沃一体机二维码扫码解锁工具",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "f4bb0/Seewo-Activation-Code-Calculator",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "f4bb0",
+                "order": 0
+            }
+        ],
+        "slug": "sacc",
+        "section": "seewocrack"
+    },
+    {
+        "name": "SecRandom",
+        "name_en": "SecRandom",
+        "codename": "sr",
+        "slogan": "随机点名",
+        "alternative_names": [],
+        "featured": true,
+        "description": "以多种方式进行随机抽取 学号/姓名/小组...",
+        "short_description": "非常好用的随机点名软件！",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "SecRandom/SecRandom",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "lzy98276",
+                "order": 0
+            },
+            {
+                "user_type": "organization",
+                "user_source": "github",
+                "username": "SecRandom",
+                "order": 1
+            }
+        ],
+        "slug": "sr",
+        "icon": "/aiwb/icons/sr.png",
+        "section": "lottery"
+    },
+    {
+        "name": "RandPicker",
+        "name_en": "RandPicker",
+        "codename": "rp",
+        "slogan": "随机点名",
+        "alternative_names": [],
+        "featured": true,
+        "short_description": "一个简单的随机选人程序",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "xuanxuan1231/RandPicker",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "xuanxuan1231",
+                "order": 0
+            }
+        ],
+        "slug": "rp",
+        "icon": "/aiwb/icons/rp.png",
+        "section": "lottery"
+    },
+    {
+        "name": "Selfstudy_boards",
+        "name_en": "Selfstudy_boards",
+        "codename": "ssb",
+        "slogan": "自习看板",
+        "alternative_names": [],
+        "featured": true,
+        "description": "该项目是一个全屏大屏幕看板，旨在实时显示当前时间、自习课纪律提醒以及实时噪音分贝数。该看板适用于学习环境，帮助学生保持专注并监控周围的噪音水平。",
+        "short_description": "Py+Tk 大屏幕自习课管看板",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "lic06/Selfstudy_boards",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "lic06",
+                "order": 0
+            }
+        ],
+        "slug": "ssb",
+        "section": "kanbans"
+    },
+    {
+        "name": "WebClock-for-Exam",
+        "name_en": "WebClock-for-Exam",
+        "codename": "wcfe",
+        "slogan": "考试时钟",
+        "alternative_names": [],
+        "featured": true,
+        "description": "基于pythonServer的考场用网页时钟",
+        "short_description": "基于 Python 的考场用网页时钟",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "Piggywu981/WebClock-for-Exam",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "Piggywu981",
+                "order": 0
+            }
+        ],
+        "slug": "wcfe",
+        "section": "kanbans"
+    },
+    {
+        "name": "AutoLogin-EasiNote5",
+        "name_en": "auto-login-for-easinote",
+        "codename": "alfen",
+        "slogan": "EN5 辅助",
+        "alternative_names": [],
+        "featured": true,
+        "description": "一个使用 Python 编写的 CLI 工具，可以用于自动登录希沃白板。通过 PyAutoGUI 实现自动识别并点击来模拟登录。",
+        "short_description": "使用模拟点击自动登录希沃白板",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "hxabcd/auto-login-for-easinote",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "hxabcd",
+                "order": 0
+            }
+        ],
+        "slug": "alfen",
+        "icon": "/aiwb/icons/alfen.png",
+        "section": "tools"
+    },
+    {
+        "name": "XWToolkit",
+        "name_en": "XWToolkit",
+        "codename": "xwt",
+        "slogan": "杂项",
+        "alternative_names": [],
+        "featured": true,
+        "short_description": "一键关EN5/关机/锁屏/禁用触摸",
+        "is_open_source": true,
+        "maintaining_status": "discountinued",
+        "links": [
+            {
+                "type": "github",
+                "repo": "bkctwy/XWToolkit",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "bkctwy",
+                "order": 0
+            }
+        ],
+        "slug": "xwt",
+        "icon": "/aiwb/icons/xwt.png",
+        "section": "hidden"
+    },
+    {
+        "name": "Easinote Helper",
+        "name_en": "Easinote-Helper",
+        "codename": "enh",
+        "slogan": "EN5 辅助",
+        "alternative_names": [],
+        "featured": true,
+        "short_description": "自动定时截图希沃白板板书内容",
+        "is_open_source": true,
+        "maintaining_status": "active",
+        "links": [
+            {
+                "type": "github",
+                "repo": "yszyszysz233/Easinote-Helper",
+                "is_main": true
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "github",
+                "username": "yszyszysz233",
+                "order": 0
+            }
+        ],
+        "slug": "enh",
+        "icon": "/aiwb/icons/enh.png",
+        "section": "tools"
+    },
+    {
+        "name": "TabClass",
+        "name_en": "TabClass",
+        "codename": "tc",
+        "slogan": "桌面课表",
+        "alternative_names": [],
+        "featured": true,
+        "short_description": "侧挂式桌面自动化课表显示工具",
+        "is_open_source": false,
+        "maintaining_status": "paused",
+        "links": [
+            {
+                "type": "cloud_drive_website",
+                "url": "https://pan.baidu.com/s/1V-AUCCuQp_696WX5Ikjrew?pwd=345u",
+                "password": "345u",
+                "description": "百度网盘下载链接",
+                "provider": "baidupan",
+                "is_main": true
+            },
+            {
+                "type": "cloud_drive_website",
+                "url": "https://pan.quark.cn/s/b17dc391f166",
+                "description": "夸克网盘下载链接",
+                "provider": "quarkpan",
+                "is_main": false
+            },
+            {
+                "type": "cloud_drive_website",
+                "url": "https://drive.google.com/drive/folders/1rmtfjldzUu3KSW7DIWIJkm9ctDqrq-Td?usp=sharing",
+                "description": "Google Drive下载链接",
+                "provider": "googledrive",
+                "is_main": false
+            }
+        ],
+        "developers": [
+            {
+                "user_type": "user",
+                "user_source": "bilibili",
+                "username": "NaSAeL",
+                "user_blog_website": "https://space.bilibili.com/406059588",
+                "user_blog_description": "NaSAeL的B站主页",
+                "order": 0
+            }
+        ],
+        "slug": "tc",
+        "icon": "/aiwb/icons/tc.png",
+        "section": "lessonstable"
     }
 ]
