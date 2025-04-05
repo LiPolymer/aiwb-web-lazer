@@ -68,9 +68,18 @@
             "description": "Ink Canvas 的优化版本，添加了更多功能（比如自动收纳、自动查杀、荧光笔、图片插入等功能），并优化了使用体验，使其更适合课堂授课使用。",
             "slogan": "批注/白板",
             "short_description": "基于WPF的屏幕批注与白板软件",
-            "is_open_source": true,
-            "hidden": true,
             "maintaining_status": "discountinued",
+            "metadata": {
+                "supported_platforms": ["windows-7","windows-8x","windows-10","windows-11"],
+                "programming_languages": ["csharp"],
+                "frameworks": ["wpf"],
+                "featured": true,
+                "is_new_developer": false,
+                "is_new_project": false,
+                "pricing_type": "free",
+                "badge_type": "is_featured",
+                "is_open_source": true
+            },
             "links": [
                 {
                     "type": "github",
@@ -80,13 +89,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "WuChanging"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "InkCanvas"
                 }
             ],
@@ -121,13 +130,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "aloisp28"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "InkCanvas"
                 }
             ],
@@ -162,13 +171,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "WXRIW"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "InkCanvas"
                 }
             ],
@@ -196,13 +205,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "realybin"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SketchNow"
                 }
             ],
@@ -230,8 +239,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "pubpub-zz"
                 }
             ],
@@ -259,8 +268,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "geovens"
                 }
             ],
@@ -281,13 +290,13 @@
             "maintaining_status": "discountinued",
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "NotYoojun"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "iNKORE-NET"
                 }
             ],
@@ -308,13 +317,13 @@
             "maintaining_status": "active",
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "NotYoojun"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "iNKORE-NET"
                 }
             ],
@@ -342,8 +351,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "linchh11117"
                 }
             ],
@@ -378,13 +387,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "HelloWRC"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "ClassIsland"
                 }
             ],
@@ -412,13 +421,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "RinLit-233-shiroko"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "Class-Widgets"
                 }
             ],
@@ -446,8 +455,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "EnderWolf006"
                 }
             ],
@@ -475,8 +484,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "gpuawa"
                 }
             ],
@@ -504,8 +513,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "DuguSand"
                 }
             ],
@@ -537,8 +546,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "LiPolymer"
                 }
             ],
@@ -573,13 +582,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "hello8693"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "ExamAware"
                 }
             ],
@@ -607,13 +616,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "MKStoler1024"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "ExamAware"
                 }
             ],
@@ -641,13 +650,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "MKStoler1024"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "ExamAware"
                 }
             ],
@@ -675,8 +684,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "STBBRD"
                 }
             ],
@@ -704,13 +713,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "jizilin6732"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "Sticky-attention"
                 }
             ],
@@ -738,13 +747,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "SunWuyuan"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "ClassworksDev"
                 }
             ],
@@ -772,8 +781,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Return-Log"
                 }
             ],
@@ -801,8 +810,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Candlest"
                 }
             ],
@@ -830,8 +839,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "unknown",
+                    "type": "user",
+                    "source": "unknown",
                     "username": "norkm"
                 }
             ],
@@ -859,8 +868,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SRInternet-Studio"
                 }
             ],
@@ -888,8 +897,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SRInternet-Studio"
                 }
             ],
@@ -917,8 +926,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Gaoyongxian666"
                 }
             ],
@@ -946,8 +955,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "clansty"
                 }
             ],
@@ -975,8 +984,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "HelloWRC"
                 }
             ],
@@ -1004,8 +1013,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "EnderWolf006"
                 }
             ],
@@ -1032,8 +1041,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "LuoYunXi0407"
                 }
             ],
@@ -1075,13 +1084,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "LHGS-github"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "NamePickerOrg"
                 }
             ],
@@ -1109,8 +1118,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "typed-sigterm"
                 }
             ],
@@ -1138,8 +1147,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Chengzi600"
                 }
             ],
@@ -1166,8 +1175,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "WhatDamon"
                 }
             ],
@@ -1195,8 +1204,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "HUSX100"
                 }
             ],
@@ -1224,8 +1233,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Yish1"
                 }
             ],
@@ -1252,8 +1261,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "VacuolePaoo"
                 }
             ],
@@ -1279,8 +1288,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "VacuolePaoo"
                 }
             ],
@@ -1307,8 +1316,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "RinLit-233-shiroko"
                 }
             ],
@@ -1336,8 +1345,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SRInternet-Studio"
                 }
             ],
@@ -1365,8 +1374,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "BengbuGuards"
                 }
             ],
@@ -1394,8 +1403,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "unknown",
+                    "type": "user",
+                    "source": "unknown",
                     "username": "Xiaocuitang",
                     "user_blog_website": "https://iceawa.com/"
                 }
@@ -1424,13 +1433,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "PYLXU"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "Ris-Soft"
                 }
             ],
@@ -1458,8 +1467,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "imengyu"
                 }
             ],
@@ -1487,8 +1496,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "cjhdevact"
                 }
             ],
@@ -1516,8 +1525,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "cjhdevact"
                 }
             ],
@@ -1545,8 +1554,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "cjhdevact"
                 }
             ],
@@ -1574,8 +1583,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "cjhdevact"
                 }
             ],
@@ -1603,8 +1612,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "cjhdevact"
                 }
             ],
@@ -1632,13 +1641,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "lzy98276"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SectionIstool"
                 }
             ],
@@ -1666,8 +1675,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "CNwenwen"
                 }
             ],
@@ -1695,8 +1704,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "HUSX100"
                 }
             ],
@@ -1724,8 +1733,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "BI4LGZ"
                 }
             ],
@@ -1752,8 +1761,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Mike-Luo-Leap"
                 }
             ],
@@ -1780,8 +1789,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "andycey"
                 }
             ],
@@ -1815,8 +1824,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "unknown",
+                    "type": "user",
+                    "source": "unknown",
                     "username": "玖小柒",
                     "user_blog_website": "https://www.jiuxiaoqi.top/"
                 }
@@ -1845,8 +1854,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "L33Z22L11"
                 }
             ],
@@ -1874,8 +1883,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "xiaoye-kotlin"
                 }
             ],
@@ -1903,8 +1912,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "luyanci"
                 }
             ],
@@ -1932,8 +1941,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "kdxhub"
                 }
             ],
@@ -1961,8 +1970,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "alex200816"
                 }
             ],
@@ -1990,8 +1999,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Meltide"
                 }
             ],
@@ -2019,8 +2028,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Xiaoxiaoyu1321"
                 }
             ],
@@ -2048,8 +2057,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "kakkk"
                 }
             ],
@@ -2077,8 +2086,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SmartTeachCN"
                 }
             ],
@@ -2106,13 +2115,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "PYLXU"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SmartTeachCN"
                 }
             ],
@@ -2138,8 +2147,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Alan-CRL"
                 }
             ],
@@ -2167,8 +2176,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "NetheriteBowl"
                 }
             ],
@@ -2196,8 +2205,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "whstu"
                 }
             ],
@@ -2224,8 +2233,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "CatMe0w"
                 }
             ],
@@ -2252,8 +2261,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "DengHanxu"
                 }
             ],
@@ -2279,8 +2288,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "f4bb0"
                 }
             ],
@@ -2307,13 +2316,13 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "lzy98276"
                 },
                 {
-                    "user_type": "organization",
-                    "user_source": "github",
+                    "type": "organization",
+                    "source": "github",
                     "username": "SecRandom"
                 }
             ],
@@ -2340,8 +2349,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "xuanxuan1231"
                 }
             ],
@@ -2369,8 +2378,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "lic06"
                 }
             ],
@@ -2397,8 +2406,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "Piggywu981"
                 }
             ],
@@ -2425,8 +2434,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "hxabcd"
                 }
             ],
@@ -2453,8 +2462,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "bkctwy"
                 }
             ],
@@ -2481,8 +2490,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "github",
+                    "type": "user",
+                    "source": "github",
                     "username": "yszyszysz233"
                 }
             ],
@@ -2526,8 +2535,8 @@
             ],
             "developers": [
                 {
-                    "user_type": "user",
-                    "user_source": "bilibili",
+                    "type": "user",
+                    "source": "bilibili",
                     "username": "NaSAeL",
                     "user_blog_website": "https://space.bilibili.com/406059588",
                     "user_blog_description": "好",
