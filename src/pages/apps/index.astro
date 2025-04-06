@@ -1,0 +1,18 @@
+---
+import { Comment } from 'astro-pure/advanced'
+import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
+
+const meta = {
+  description: 'Not found',
+  title: '404'
+}
+---
+
+<PageLayout {meta}>
+    <div class='px-4 py-10 flex flex-col items-center sm:px-6 lg:px-8'>
+        <h1 class='block text-3xl font-bold'>Apps</h1>
+        <p class='text-base mt-3 w-24rem text-center text-muted-foreground'>看来你不小心进入了这个页面，请在路径后跟上对应应用的 SlugID ，即可跳转到对应应用的详细信息页面。</p>
+        <Button title='返回到首页' href='/' style='ahead' class='mt-5' />
+      </div>
+</PageLayout>

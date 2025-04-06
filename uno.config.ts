@@ -170,6 +170,10 @@ export default defineConfig({
       breakpoints: {
         ...theme.breakpoints,
         ...customBreakPoints
+      },
+      fontFamily: {
+        ... theme.fontFamily,
+        mono: ["JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
       }
     }
   },

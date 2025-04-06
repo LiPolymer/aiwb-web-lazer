@@ -1,0 +1,71 @@
+---
+import AiwbListJson from '../../content/aiwb-list.json'
+import PageLayout from '@/layouts/BaseLayout.astro'
+
+import awesomeiwbLogo from '@/assets/aiwb/aiwb_logo.svg'
+import config from '@/site-config'
+import AiwbHomeSoftList from '@/components/aiwb/home/AiwbHomeSoftList.astro'
+import AiwbTextLogo from '@/components/aiwb/home/AiwbTextLogo.astro'
+import AiwbHeroBackground from '@/components/aiwb/home/AiwbHeroBackground.astro'
+import { Image } from 'astro:assets'
+import { Button, Icon, Label } from 'astro-pure/user'
+import Section from '@/components/home/Section.astro'
+import AiwbAppInfoBadge from '@/components/aiwb/apps/AiwbAppInfoBadge.astro'
+
+export function getStaticPaths() {
+    let items = AiwbListJson.data.filter((item) => item.slug !== undefined && item.hidden !== true)
+    return items.map((item) => {
+        return {
+            params: { appSlugId: item.slug }
+        }
+    })
+}
+
+const { appSlugId } = Astro.params;
+const appItem = AiwbListJson.data.find((item) => item.slug === appSlugId);
+
+---
+
+<PageLayout meta={{
+    title: appSlugId,
+    description: "Awesome Iwb - 全网最全的班级一体机实用软件整合目录",
+}} highlightColor={appItem?.metadata?.primary_color ?? '#70FFB8'}>
+    <main class='flex w-full flex-col items-center'>
+        <section class='animate mb-16 flex flex-col items-center gap-y-7 mt-24 relative' id='content-header'>
+
+          <AiwbHeroBackground/>
+
+          <img
+            src={appItem?.icon}
+            alt='awesomeiwb-logo'
+            class='h-24 w-auto p-1'
+            loading='eager'
+          />
+
+          <div class="text-3xl text-foreground font-semibold">{appItem?.name}</div>
+
+          <div class='flex flex-col items-center gap-y-4 -mt-2'>
+            <h4 class='text-base max-w-28rem text-center text-foreground:50 -mb-2'>{appItem?.description}</h4>
+            <h4 class='text-base font-medium max-w-28rem text-center text-foreground:75'>{appItem?.short_description}</h4>
+            <div class='flex flex-wrap justify-center mt-2 gap-x-2 gap-y-3'>
+              <AiwbAppInfoBadge type="github-stars" color="green" repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+              <AiwbAppInfoBadge type="github-issues" color='red' repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+            </div>
+          </div>
+
+        </section>
+
+        <div id='content' class='animate flex flex-col mt-8 gap-y-10 md:w-4/5 lg:w-5/6'>
+          <Section title='关于项目'>
+            <p class='text-muted-foreground'>Awesome Iwb 是一个收集令人惊叹的教学辅助软件和一体机实用软件的地方。其中收录的绝大多数软件都由在读中学生开发，都是为了提升班级一体机的使用体验，助力日常教学更加轻松。</p>
+            <p class='text-muted-foreground'>
+              本网站旨在收集下面的教学辅助软件或服务（所以不一定是软件，也有一些是网页服务或开发规范类的东西），尽可能详细展现其功能，同时为每个项目提供 “锐评” 板块（这样你就可以看到逗比对这些软件的极端评价了）和详细的使用体验、技巧分享等相关的文章（不一定都是逗比本人写的）。如欲提出问题，请前往对应仓库/交流平台，而不是在这里询问有关软件的问题。
+            </p>
+            <Button title='了解更多' class='w-fit self-end' href='/about' style='ahead' />
+          </Section>
+
+          <AiwbHomeSoftList/>
+
+        </div>
+    </main>
+</PageLayout>

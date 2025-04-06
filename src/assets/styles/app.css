@@ -1,5 +1,5 @@
 /* Font */
-@font-face {
+/* @font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi-Variable.ttf');
   font-style: normal;
@@ -10,9 +10,36 @@
   src: url('/fonts/Satoshi-VariableItalic.ttf');
   font-style: italic;
   font-display: swap;
+} */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono[wght].ttf');
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'JetBrains Mono Italic';
+  src: url('/fonts/JetBrainsMono-Italic[wght].ttf');
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiSans';
+  src: url('/fonts/MiSans VF.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MiSans L3';
+  src: url('/fonts/MiSans L3.otf');
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "MiSans", "MiSans L3", sans-serif;
 }
 
 /* Theme */

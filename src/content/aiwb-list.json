@@ -16,21 +16,24 @@
                 {
                     "type": "github",
                     "repo": "Alan-CRL/Inkeys",
-                    "description": "GitHub 仓库",
-                    "is_main": true
+                    "description": "GitHub 仓库"
                 },
                 {
                     "type": "website",
                     "url": "https://www.inkeys.top/",
-                    "description": "官方网站",
-                    "is_main": false
+                    "description": "官方网站"
                 },
                 {
                     "type": "cloud_drive_website",
                     "url": "https://www.123pan.com/s/duk9-n4dAd.html",
                     "provider": "123pan",
-                    "description": "123 网盘分流",
-                    "is_main": false
+                    "description": "123 网盘分流"
+                },
+                {
+                    "type": "qq_group",
+                    "group_id": "618720802",
+                    "url": "https://qm.qq.com/q/iEDzSL0Wn",
+                    "description": "QQ 群"
                 }
             ],
             "metadata": {
@@ -42,7 +45,8 @@
                 "is_new_project": false,
                 "pricing_type": "free",
                 "badge_type": "is_featured",
-                "is_open_source": true
+                "is_open_source": true,
+                "primary_color": "#4397f7"
             },
             "developers": [
                 {
@@ -83,8 +87,13 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "InkCanvas/Ink-Canvas-Artistry",
-                    "is_main": true
+                    "repo": "InkCanvas/Ink-Canvas-Artistry"
+                },
+                {
+                    "type": "qq_group",
+                    "group_id": "617707731",
+                    "url": "https://qm.qq.com/q/AC777tzmEw",
+                    "description": "QQ 群"
                 }
             ],
             "developers": [
@@ -118,14 +127,12 @@
                 {
                     "type": "github",
                     "repo": "Awesome-Iwb/icc-0610fix",
-                    "description": "0610修复版本",
-                    "is_main": true
+                    "description": "0610修复版本"
                 },
                 {
                     "type": "github",
                     "repo": "Awesome-Iwb/InkCanvasForClass",
-                    "description": "latest分支",
-                    "is_main": false
+                    "description": "latest分支"
                 }
             ],
             "developers": [
@@ -159,14 +166,12 @@
                 {
                     "type": "github",
                     "repo": "WXRIW/Ink-Canvas",
-                    "description": "原版",
-                    "is_main": true
+                    "description": "原版"
                 },
                 {
                     "type": "github",
                     "repo": "InkCanvas/Ink-Canvas",
-                    "description": "组织fork版",
-                    "is_main": false
+                    "description": "组织fork版"
                 }
             ],
             "developers": [
@@ -199,8 +204,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SketchNow/SketchNow.WPF",
-                    "is_main": true
+                    "repo": "SketchNow/SketchNow.WPF"
                 }
             ],
             "developers": [
@@ -233,8 +237,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "pubpub-zz/ppInk",
-                    "is_main": true
+                    "repo": "pubpub-zz/ppInk"
                 }
             ],
             "developers": [
@@ -262,8 +265,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "geovens/gInk",
-                    "is_main": true
+                    "repo": "geovens/gInk"
                 }
             ],
             "developers": [
@@ -345,8 +347,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "lh11117/LemonxNote",
-                    "is_main": true
+                    "repo": "lh11117/LemonxNote"
                 }
             ],
             "developers": [
@@ -375,14 +376,12 @@
                 {
                     "type": "github",
                     "repo": "ClassIsland/ClassIsland",
-                    "description": ".NET8 版本",
-                    "is_main": true
+                    "description": ".NET8 版本"
                 },
                 {
                     "type": "github",
                     "repo": "ClassIsland/ClassIsland-net6",
-                    "description": ".NET6 (Windows 7) 兼容版本",
-                    "is_main": false
+                    "description": ".NET6 (Windows 7) 兼容版本"
                 }
             ],
             "developers": [
@@ -415,8 +414,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Class-Widgets/Class-Widgets",
-                    "is_main": true
+                    "repo": "Class-Widgets/Class-Widgets"
                 }
             ],
             "developers": [
@@ -449,8 +447,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "EnderWolf006/ElectronClassSchedule",
-                    "is_main": true
+                    "repo": "EnderWolf006/ElectronClassSchedule"
                 }
             ],
             "developers": [
@@ -478,8 +475,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "gpuawa/iClass",
-                    "is_main": true
+                    "repo": "gpuawa/iClass"
                 }
             ],
             "developers": [
@@ -507,8 +503,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "DuguSand/class_form",
-                    "is_main": true
+                    "repo": "DuguSand/class_form"
                 }
             ],
             "developers": [
@@ -535,13 +530,11 @@
             "links": [
                 {
                     "type": "gitlab",
-                    "repo": "LiPolymer/ExtraIsland",
-                    "is_main": true
+                    "repo": "LiPolymer/ExtraIsland"
                 },
                 {
                     "type": "github",
-                    "repo": "LiPolymer/ExtraIsland",
-                    "is_main": false
+                    "repo": "LiPolymer/ExtraIsland"
                 }
             ],
             "developers": [
@@ -570,14 +563,12 @@
                 {
                     "type": "github",
                     "repo": "ExamAware/ExamShowboard-Legacy",
-                    "description": "考试看板 桌面端",
-                    "is_main": true
+                    "description": "考试看板 桌面端"
                 },
                 {
                     "type": "github",
                     "repo": "ExamAware/ExamAware-Mobile",
-                    "description": "考试看板 移动端",
-                    "is_main": false
+                    "description": "考试看板 移动端"
                 }
             ],
             "developers": [
@@ -610,8 +601,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "ExamAware/ExamSchedule",
-                    "is_main": true
+                    "repo": "ExamAware/ExamSchedule"
                 }
             ],
             "developers": [
@@ -644,8 +634,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "ExamAware/ExamCloudSchedule",
-                    "is_main": true
+                    "repo": "ExamAware/ExamCloudSchedule"
                 }
             ],
             "developers": [
@@ -678,8 +667,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "STBBRD/ZongziTEK-Blackboard-Sticker",
-                    "is_main": true
+                    "repo": "STBBRD/ZongziTEK-Blackboard-Sticker"
                 }
             ],
             "developers": [
@@ -707,8 +695,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Sticky-attention/Sticky-attention",
-                    "is_main": true
+                    "repo": "Sticky-attention/Sticky-attention"
                 }
             ],
             "developers": [
@@ -741,8 +728,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "ClassworksDev/Classworks",
-                    "is_main": true
+                    "repo": "ClassworksDev/Classworks"
                 }
             ],
             "developers": [
@@ -775,8 +761,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Return-Log/Education-Clock",
-                    "is_main": true
+                    "repo": "Return-Log/Education-Clock"
                 }
             ],
             "developers": [
@@ -804,8 +789,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Candlest/ClassBoardSharp",
-                    "is_main": true
+                    "repo": "Candlest/ClassBoardSharp"
                 }
             ],
             "developers": [
@@ -833,8 +817,7 @@
             "links": [
                 {
                     "type": "website",
-                    "url": "https://norkm.com/",
-                    "is_main": true
+                    "url": "https://norkm.com/"
                 }
             ],
             "developers": [
@@ -862,8 +845,7 @@
             "links": [
                 {
                     "type": "website",
-                    "url": "https://timerin.sr-studio.top/",
-                    "is_main": true
+                    "url": "https://timerin.sr-studio.top/"
                 }
             ],
             "developers": [
@@ -891,8 +873,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SRInternet-Studio/Class_Hot_Search",
-                    "is_main": true
+                    "repo": "SRInternet-Studio/Class_Hot_Search"
                 }
             ],
             "developers": [
@@ -920,8 +901,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Gaoyongxian666/CountBoard",
-                    "is_main": true
+                    "repo": "Gaoyongxian666/CountBoard"
                 }
             ],
             "developers": [
@@ -949,8 +929,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "clansty/ClassTools",
-                    "is_main": true
+                    "repo": "clansty/ClassTools"
                 }
             ],
             "developers": [
@@ -978,8 +957,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "HelloWRC/StickyHomeworks",
-                    "is_main": true
+                    "repo": "HelloWRC/StickyHomeworks"
                 }
             ],
             "developers": [
@@ -1007,8 +985,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "EnderWolf006/HomeworkBoard",
-                    "is_main": true
+                    "repo": "EnderWolf006/HomeworkBoard"
                 }
             ],
             "developers": [
@@ -1035,8 +1012,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "LuoYunXi0407/Rand",
-                    "is_main": true
+                    "repo": "LuoYunXi0407/Rand"
                 }
             ],
             "developers": [
@@ -1065,21 +1041,18 @@
                 {
                     "type": "github",
                     "repo": "NamePickerOrg/NamePicker",
-                    "description": "主仓库",
-                    "is_main": true
+                    "description": "主仓库"
                 },
                 {
                     "type": "github",
                     "repo": "NamePickerOrg/NP-NameEditor",
-                    "description": "编辑器",
-                    "is_main": false
+                    "description": "编辑器"
                 },
                 {
                     "type": "website",
                     "service": "streamlit",
                     "url": "https://np-nameeditor.streamlit.app/",
-                    "description": "编辑器在线版",
-                    "is_main": false
+                    "description": "编辑器在线版"
                 }
             ],
             "developers": [
@@ -1112,8 +1085,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "typed-sigterm/ex-caller",
-                    "is_main": true
+                    "repo": "typed-sigterm/ex-caller"
                 }
             ],
             "developers": [
@@ -1141,8 +1113,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Chengzi600/ClassNamePicker",
-                    "is_main": true
+                    "repo": "Chengzi600/ClassNamePicker"
                 }
             ],
             "developers": [
@@ -1169,8 +1140,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "WhatDamon/OpenLuckyRandom",
-                    "is_main": true
+                    "repo": "WhatDamon/OpenLuckyRandom"
                 }
             ],
             "developers": [
@@ -1198,8 +1168,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "HUSX100/IslandCaller",
-                    "is_main": true
+                    "repo": "HUSX100/IslandCaller"
                 }
             ],
             "developers": [
@@ -1227,8 +1196,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Yish1/Class-Roster-Picker-NEXT",
-                    "is_main": true
+                    "repo": "Yish1/Class-Roster-Picker-NEXT"
                 }
             ],
             "developers": [
@@ -1255,8 +1223,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "VacuolePaoo/random-student",
-                    "is_main": true
+                    "repo": "VacuolePaoo/random-student"
                 }
             ],
             "developers": [
@@ -1282,8 +1249,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "VacuolePaoo/stu-task-generate",
-                    "is_main": true
+                    "repo": "VacuolePaoo/stu-task-generate"
                 }
             ],
             "developers": [
@@ -1310,8 +1276,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "RinLit-233-shiroko/PowerPoint-Touch-Assist",
-                    "is_main": true
+                    "repo": "RinLit-233-shiroko/PowerPoint-Touch-Assist"
                 }
             ],
             "developers": [
@@ -1339,8 +1304,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SRInternet-Studio/Seewo-Custom_Start",
-                    "is_main": true
+                    "repo": "SRInternet-Studio/Seewo-Custom_Start"
                 }
             ],
             "developers": [
@@ -1368,8 +1332,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "BengbuGuards/MythwareToolkit",
-                    "is_main": true
+                    "repo": "BengbuGuards/MythwareToolkit"
                 }
             ],
             "developers": [
@@ -1397,8 +1360,7 @@
             "links": [
                 {
                     "type": "website",
-                    "url": "https://file.iceawa.com/iceawa-onedrive/ENAL/Ver",
-                    "is_main": true
+                    "url": "https://file.iceawa.com/iceawa-onedrive/ENAL/Ver"
                 }
             ],
             "developers": [
@@ -1427,8 +1389,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Ris-Soft/Ris_ClassTool",
-                    "is_main": true
+                    "repo": "Ris-Soft/Ris_ClassTool"
                 }
             ],
             "developers": [
@@ -1461,8 +1422,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "imengyu/JiYuTrainer",
-                    "is_main": true
+                    "repo": "imengyu/JiYuTrainer"
                 }
             ],
             "developers": [
@@ -1490,8 +1450,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "cjhdevact/LockTime",
-                    "is_main": true
+                    "repo": "cjhdevact/LockTime"
                 }
             ],
             "developers": [
@@ -1519,8 +1478,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "cjhdevact/UsefulControl",
-                    "is_main": true
+                    "repo": "cjhdevact/UsefulControl"
                 }
             ],
             "developers": [
@@ -1548,8 +1506,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "cjhdevact/TDocKiller",
-                    "is_main": true
+                    "repo": "cjhdevact/TDocKiller"
                 }
             ],
             "developers": [
@@ -1577,8 +1534,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "cjhdevact/CountDownControl",
-                    "is_main": true
+                    "repo": "cjhdevact/CountDownControl"
                 }
             ],
             "developers": [
@@ -1606,8 +1562,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "cjhdevact/FlyEduDownloader",
-                    "is_main": true
+                    "repo": "cjhdevact/FlyEduDownloader"
                 }
             ],
             "developers": [
@@ -1635,8 +1590,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SectionIstool/SectionIstool",
-                    "is_main": true
+                    "repo": "SectionIstool/SectionIstool"
                 }
             ],
             "developers": [
@@ -1669,8 +1623,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "CNwenwen/SeewoHUB",
-                    "is_main": true
+                    "repo": "CNwenwen/SeewoHUB"
                 }
             ],
             "developers": [
@@ -1698,8 +1651,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "HUSX100/ClassDashboard",
-                    "is_main": true
+                    "repo": "HUSX100/ClassDashboard"
                 }
             ],
             "developers": [
@@ -1727,8 +1679,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "BI4LGZ/void-board",
-                    "is_main": true
+                    "repo": "BI4LGZ/void-board"
                 }
             ],
             "developers": [
@@ -1755,8 +1706,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Mike-Luo-Leap/Seewo-SC06-light-to-photo",
-                    "is_main": true
+                    "repo": "Mike-Luo-Leap/Seewo-SC06-light-to-photo"
                 }
             ],
             "developers": [
@@ -1783,8 +1733,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "andycey/Class-Scoring-Program",
-                    "is_main": true
+                    "repo": "andycey/Class-Scoring-Program"
                 }
             ],
             "developers": [
@@ -1810,16 +1759,14 @@
             "links": [
                 {
                     "type": "qq_group",
-                    "group_id": "729083415",
-                    "is_main": true
+                    "group_id": "729083415"
                 },
                 {
                     "type": "cloud_drive_website",
                     "provider": "lanzou",
                     "description": "Beta 0.1.2 下载链接",
                     "url": "https://vnisoft.lanzouq.com/iyUYa2omv86j",
-                    "password": "vsb012",
-                    "is_main": false
+                    "password": "vsb012"
                 }
             ],
             "developers": [
@@ -1848,8 +1795,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "L33Z22L11/ExamClock",
-                    "is_main": true
+                    "repo": "L33Z22L11/ExamClock"
                 }
             ],
             "developers": [
@@ -1877,8 +1823,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "xiaoye-kotlin/RollCallSystem",
-                    "is_main": true
+                    "repo": "xiaoye-kotlin/RollCallSystem"
                 }
             ],
             "developers": [
@@ -1906,8 +1851,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "animation-picker/genshin-impact",
-                    "is_main": true
+                    "repo": "animation-picker/genshin-impact"
                 }
             ],
             "developers": [
@@ -1935,8 +1879,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "kdxhub/random_name_picker",
-                    "is_main": true
+                    "repo": "kdxhub/random_name_picker"
                 }
             ],
             "developers": [
@@ -1964,8 +1907,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "alex200816/Typing-game",
-                    "is_main": true
+                    "repo": "alex200816/Typing-game"
                 }
             ],
             "developers": [
@@ -1993,8 +1935,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Meltide/RandomCall",
-                    "is_main": true
+                    "repo": "Meltide/RandomCall"
                 }
             ],
             "developers": [
@@ -2022,8 +1963,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Xiaoxiaoyu1321/Random-roll-call",
-                    "is_main": true
+                    "repo": "Xiaoxiaoyu1321/Random-roll-call"
                 }
             ],
             "developers": [
@@ -2051,8 +1991,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "kakkk/RandomExtract",
-                    "is_main": true
+                    "repo": "kakkk/RandomExtract"
                 }
             ],
             "developers": [
@@ -2080,8 +2019,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SmartTeachCN/CSES",
-                    "is_main": true
+                    "repo": "SmartTeachCN/CSES"
                 }
             ],
             "developers": [
@@ -2109,8 +2047,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SmartTeachCN/CsesWebEditor",
-                    "is_main": true
+                    "repo": "SmartTeachCN/CsesWebEditor"
                 }
             ],
             "developers": [
@@ -2141,8 +2078,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Alan-CRL/DesktopDrawpadBlocker",
-                    "is_main": true
+                    "repo": "Alan-CRL/DesktopDrawpadBlocker"
                 }
             ],
             "developers": [
@@ -2170,8 +2106,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "NetheriteBowl/SigmaCountdown",
-                    "is_main": true
+                    "repo": "NetheriteBowl/SigmaCountdown"
                 }
             ],
             "developers": [
@@ -2199,8 +2134,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "whstu/SeewoKiller",
-                    "is_main": true
+                    "repo": "whstu/SeewoKiller"
                 }
             ],
             "developers": [
@@ -2227,8 +2161,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "CatMe0w/seewo_jailbreak",
-                    "is_main": true
+                    "repo": "CatMe0w/seewo_jailbreak"
                 }
             ],
             "developers": [
@@ -2255,8 +2188,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "DengHanxu/SeewoMonitorSystem",
-                    "is_main": true
+                    "repo": "DengHanxu/SeewoMonitorSystem"
                 }
             ],
             "developers": [
@@ -2282,8 +2214,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "f4bb0/Seewo-Activation-Code-Calculator",
-                    "is_main": true
+                    "repo": "f4bb0/Seewo-Activation-Code-Calculator"
                 }
             ],
             "developers": [
@@ -2310,8 +2241,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "SecRandom/SecRandom",
-                    "is_main": true
+                    "repo": "SecRandom/SecRandom"
                 }
             ],
             "developers": [
@@ -2343,8 +2273,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "xuanxuan1231/RandPicker",
-                    "is_main": true
+                    "repo": "xuanxuan1231/RandPicker"
                 }
             ],
             "developers": [
@@ -2372,8 +2301,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "lic06/Selfstudy_boards",
-                    "is_main": true
+                    "repo": "lic06/Selfstudy_boards"
                 }
             ],
             "developers": [
@@ -2400,8 +2328,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "Piggywu981/WebClock-for-Exam",
-                    "is_main": true
+                    "repo": "Piggywu981/WebClock-for-Exam"
                 }
             ],
             "developers": [
@@ -2428,8 +2355,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "hxabcd/auto-login-for-easinote",
-                    "is_main": true
+                    "repo": "hxabcd/auto-login-for-easinote"
                 }
             ],
             "developers": [
@@ -2456,8 +2382,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "bkctwy/XWToolkit",
-                    "is_main": true
+                    "repo": "bkctwy/XWToolkit"
                 }
             ],
             "developers": [
@@ -2484,8 +2409,7 @@
             "links": [
                 {
                     "type": "github",
-                    "repo": "yszyszysz233/Easinote-Helper",
-                    "is_main": true
+                    "repo": "yszyszysz233/Easinote-Helper"
                 }
             ],
             "developers": [
@@ -2515,22 +2439,19 @@
                     "url": "https://pan.baidu.com/s/1V-AUCCuQp_696WX5Ikjrew?pwd=345u",
                     "password": "345u",
                     "description": "百度网盘下载链接",
-                    "provider": "baidupan",
-                    "is_main": true
+                    "provider": "baidupan"
                 },
                 {
                     "type": "cloud_drive_website",
                     "url": "https://pan.quark.cn/s/b17dc391f166",
                     "description": "夸克网盘下载链接",
-                    "provider": "quarkpan",
-                    "is_main": false
+                    "provider": "quarkpan"
                 },
                 {
                     "type": "cloud_drive_website",
                     "url": "https://drive.google.com/drive/folders/1rmtfjldzUu3KSW7DIWIJkm9ctDqrq-Td?usp=sharing",
                     "description": "Google Drive下载链接",
-                    "provider": "googledrive",
-                    "is_main": false
+                    "provider": "googledrive"
                 }
             ],
             "developers": [

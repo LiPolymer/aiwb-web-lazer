@@ -69,12 +69,6 @@
                     "description": "对该仓库的描述",
                     "title": "链接描述 (description)",
                     "examples": ["GitHub 仓库", "GitHub Repo"]
-                },
-                "is_main": {
-                    "type": "boolean",
-                    "description": "是否为主要链接，默认为 true",
-                    "title": "是否为主要链接 (is_main)",
-                    "default": true
                 }
             },
             "required": ["repo", "type"],
@@ -141,12 +135,6 @@
                     "description": "对该网站的描述",
                     "title": "链接描述 (description)",
                     "examples": ["官方网站", "落地页"]
-                },
-                "is_main": {
-                    "type": "boolean",
-                    "description": "是否为主要链接，默认为 true",
-                    "title": "是否为主要链接 (is_main)",
-                    "default": true
                 }
             },
             "required": ["url", "type"]
@@ -166,17 +154,17 @@
                     "title": "QQ群号 (group_id)",
                     "pattern": "^\\d{5,12}$"
                 },
+                "url": {
+                    "type": "string",
+                    "description": "QQ群链接，必须是一个有效的 QQ 群链接。",
+                    "title": "QQ群链接 (url)",
+                    "format": "uri"
+                },
                 "description": {
                     "type": "string",
                     "description": "对该链接的描述",
                     "title": "链接描述 (description)",
                     "examples": ["QQ群", "交流群"]
-                },
-                "is_main": {
-                    "type": "boolean",
-                    "description": "是否为主要链接，默认为 true",
-                    "title": "是否为主要链接 (is_main)",
-                    "default": true
                 }
             },
             "required": ["group_id", "type"]
@@ -235,12 +223,6 @@
                     "description": "对该网盘的描述",
                     "title": "链接描述 (description)",
                     "examples": ["网盘地址", "下载地址"]
-                },
-                "is_main": {
-                    "type": "boolean",
-                    "description": "是否为主要链接，默认为 true",
-                    "title": "是否为主要链接 (is_main)",
-                    "default": true
                 }
             },
             "required": ["url", "type", "provider"]
@@ -265,12 +247,6 @@
                     "description": "对该链接的描述",
                     "title": "链接描述 (description)",
                     "examples": ["B站宣传视频", "B站视频"]
-                },
-                "is_main": {
-                    "type": "boolean",
-                    "description": "是否为主要链接，默认为 true",
-                    "title": "是否为主要链接 (is_main)",
-                    "default": true
                 }
             },
             "required": ["video_id", "type"]
@@ -404,6 +380,13 @@
                     "description": "是否为最近上榜的新项目或最近新创建的项目，默认为 false",
                     "title": "新项目 (is_new_project)",
                     "default": false
+                },
+                "primary_color": {
+                    "type": "string",
+                    "description": "项目的主要颜色，默认无色，可以使用十六进制颜色值或 RGB 颜色值。",
+                    "title": "项目主要颜色 (primary_color)",
+                    "examples": ["#000000", "#FF5733", "#4CAF50", "#2196F3"],
+                    "pattern": "^#?([a-f0-9]{6}|[a-f0-9]{3})$"
                 },
                 "pricing_type": {
                     "type": "string",
