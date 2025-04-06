@@ -140,7 +140,11 @@ export const integ: IntegrationUserConfig = {
       },
       imageUploader: false
     }
-  }
+  },
+
+  aiwb_badge: {
+    prefetch: true,
+  },
 }
 
 export const terms: CardListData = {

@@ -12,6 +12,7 @@ import { Button, Icon, Label } from 'astro-pure/user'
 import Section from '@/components/home/Section.astro'
 import AiwbAppInfoBadge from '@/components/aiwb/apps/AiwbAppInfoBadge.astro'
 
+export const prerender = true;
 export function getStaticPaths() {
     let items = AiwbListJson.data.filter((item) => item.slug !== undefined && item.hidden !== true)
     return items.map((item) => {
@@ -48,8 +49,10 @@ const appItem = AiwbListJson.data.find((item) => item.slug === appSlugId);
             <h4 class='text-base max-w-28rem text-center text-foreground:50 -mb-2'>{appItem?.description}</h4>
             <h4 class='text-base font-medium max-w-28rem text-center text-foreground:75'>{appItem?.short_description}</h4>
             <div class='flex flex-wrap justify-center mt-2 gap-x-2 gap-y-3'>
-              <AiwbAppInfoBadge type="github-stars" color="green" repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
-              <AiwbAppInfoBadge type="github-issues" color='red' repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+                <AiwbAppInfoBadge type="github-stars" color="green" repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+                <AiwbAppInfoBadge type="github-issues" color='red' repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+                <AiwbAppInfoBadge type="github-forks" color='blue' repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
+                <AiwbAppInfoBadge type="github-watchers" color='purple' repo={appItem?.links?.filter((item)=>item.type==="github")[0].repo}/>
             </div>
           </div>
 

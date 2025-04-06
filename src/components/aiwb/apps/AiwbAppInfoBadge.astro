@@ -1,14 +1,50 @@
 ---
+import { integ } from '@/site-config'
+
 interface Props {
-  type: "github-stars" | "github-issues"
-  title: string
-  content: string
+  type: "github-stars" | "github-issues" | "github-forks" | "github-watchers" | "static"
+  title?: string
+  content?: string
   color?: "green" | "red" | "blue" | "yellow" | "purple"
+  repo?: string
 }
-const { type, title, content, color } = Astro.props
+const { type, title, content, color, repo } = Astro.props
+
+let repoInfo = null;
+
+if (type === "github-stars" || type === "github-issues" || type === "github-forks" || type === "github-watchers") {
+  if (!repo) {
+    throw new Error("Missing repo attribute for GitHub badge");
+  }
+  const [owner, repoName] = repo.split("/");
+  if (!owner || !repoName) {
+    throw new Error("Invalid repo format. Expected 'owner/repo'");
+  }
+  // Prefetch Repository data
+  if (integ.aiwb_badge.prefetch){
+    const repoData = await fetch(`https://api.github.com/repos/${owner}/${repoName}`);
+    const repoJson = await repoData.json();
+    console.log(repoJson);
+    if (!repoJson) {
+      throw new Error("Failed to fetch repository data");
+    }
+    const stars = repoJson.stargazers_count??"0";
+    const issues = repoJson.open_issues_count??"0";
+    const forks = repoJson.forks??"0";
+    const watchers = repoJson.subscribers_count??"0";
+    repoInfo = { owner, repoName, stars, issues, forks, watchers };
+  } else {
+    repoInfo = { owner, repoName, stars: "0", issues: "0", forks: "0", watchers: "0" };
+    console.warn("Server-side prefetch is disabled, requiring client-side fetching.");
+  }
+} else if (type === "static") {
+  // Handle static badge
+} else {
+  throw new Error("Invalid type. Expected 'github-stars', 'github-issues', or 'static'");
+}
 ---
 
-<div class="rounded-md overflow-hidden flex flex-row items-stretch">
+<aiwb-badge data-type={type} data-repo={repo??null} class="rounded-md overflow-hidden flex flex-row items-stretch">
   <div class="relative flex flex-row items-center h-6.5 gap-x-1.5 px-2 py-1.1 bg-zinc-700 text-zinc-100 text-shadow-sm">
     <div class="absolute bottom-0 left-0 h-3 w-full z-0 bg-gradient-to-b from-[#111]:0 to-[#000]:15"/>
     { type === "github-stars" ? (
@@ -17,6 +53,12 @@ const { type, title, content, color } = Astro.props
     ): type === "github-issues" ? (
       <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2.5"  stroke-linecap="round"  stroke-linejoin="round"  class="size-4 z-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path stroke-width="4" d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg>
       <div class="text-sm leading-none font-medium z-1">Issues</div>
+    ): type === "github-forks" ? (
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="size-4 z-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2" /><path d="M12 12l0 4" /></svg>
+      <div class="text-sm leading-none font-medium z-1">Forks</div>
+    ) : type === "github-watchers" ? (
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="size-4 z-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10" /><path d="M16 4h2l3 10" /><path d="M10 16l4 0" /><path d="M21 16.5a3.5 3.5 0 0 1 -7 0v-2.5h7v2.5" /><path d="M10 16.5a3.5 3.5 0 0 1 -7 0v-2.5h7v2.5" /></svg>
+      <div class="text-sm leading-none font-medium z-1">Watchers</div>
     ): null}
   </div>
   <div class:list={["relative flex flex-row items-center h-6.5 px-2 py-1.1 text-shadow-sm",
@@ -29,11 +71,57 @@ const { type, title, content, color } = Astro.props
   ]}>
     <div class="absolute bottom-0 left-0 h-3 w-full z-0 bg-gradient-to-b from-[#111]:0 to-[#000]:15"/>
     { type === "github-stars" ? (
-          <div class="text-sm leading-none z-1 font-mono mr-1 font-medium">128</div>
-          <div class="text-sm font-350 leading-none z-1">stars</div>
+          <div class="stars-number text-sm leading-none z-1 font-mono font-medium">{repoInfo?.stars}</div>
+          // <div class="text-sm font-350 leading-none z-1">stars</div>
     ): type === "github-issues" ? (
-          <div class="text-sm leading-none z-1 font-mono mr-1 font-medium">27</div>
-          <div class="text-sm font-350 leading-none z-1">issues</div>
-    ):null}
+          <div class="issues-number text-sm leading-none z-1 font-mono font-medium">{repoInfo?.issues}</div>
+          // <div class="text-sm font-350 leading-none z-1">issues</div>
+    ): type === "github-forks" ? (
+          <div class="forks-number text-sm leading-none z-1 font-mono font-medium">{repoInfo?.issues}</div>
+          // <div class="text-sm font-350 leading-none z-1">issues</div>
+    ): type === "github-watchers" ? (
+          <div class="watchers-number text-sm leading-none z-1 font-mono font-medium">{repoInfo?.issues}</div>
+          // <div class="text-sm font-350 leading-none z-1">issues</div>
+    ): <div class="text-sm font-350 leading-none z-1">{content}</div>}
   </div>
 </div>
+
+<script>
+  class AiwbInfoBadge extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    async fetchGithubData(type, repo) {
+      const url = `https://api.github.com/repos/${repo}`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        if (type === "github-stars") {
+          this.querySelector(".stars-number").textContent = data.stargazers_count??"0";
+        } else if (type === "github-issues") {
+          this.querySelector(".issues-number").textContent = data.open_issues_count??"0";
+        } else if (type === "github-forks") {
+          this.querySelector(".forks-number").textContent = data.forks??"0";
+        } else if (type === "github-watchers") {
+          this.querySelector(".watchers-number").textContent = data.subscribers_count??"0";
+        }
+      } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+      }
+    }
+
+    connectedCallback() {
+      let type = this.getAttribute("data-type");
+      let repo = this.getAttribute("data-repo");
+      if (type === "github-stars" || type === "github-issues") {
+        this.fetchGithubData(type, repo);
+      }
+    }
+  }
+
+  customElements.define("aiwb-badge", AiwbInfoBadge);
+</script>

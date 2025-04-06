@@ -52,7 +52,13 @@ export const IntegrationConfigSchema = () =>
       emoji: z.array(z.string()).optional(),
       /** Additional configurations for the Waline comment system. */
       additionalConfigs: z.record(z.string(), z.any()).default({})
+    }),
+
+    aiwb_badge: z.object({
+      // 显示Awesome Iwb Badge的时候预先在渲染时获取数据
+      prefetch: z.boolean().default(true),
     })
+    
   })
 
 export type IntegrationConfig = z.infer<ReturnType<typeof IntegrationConfigSchema>>
